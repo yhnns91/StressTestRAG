@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: "StressTestRAG: A Human-Annotated Benchmark for Software Reliability Testing of Retrieval-Augmented Generation under Crisis-Induced Prompt Noise"
+message: "If you use this dataset, please cite it as below."
+type: dataset
+authors:
+  - given-names: ""
+    family-names: ""
+    affiliation: ""
+version: 0.1.0
+date-released: "2026-08-03"
+license: CC-BY-4.0
+abstract: >-
+  StressTestRAG is a human-annotated benchmark for evaluating the reliability of
+  Retrieval-Augmented Generation systems when user queries preserve semantic
+  intent but exhibit crisis-induced linguistic noise, such as anxiety, panic,
+  urgency, fragmentation, typographical error, and distrust. Each scenario pairs
+  a calm baseline question with five stressed variants, all linked to an evidence
+  chunk from an official source document.
+keywords:
+  - retrieval-augmented generation
+  - software reliability testing
+  - robustness evaluation
+  - human annotation
+  - crisis communication

@@ -1,0 +1,49 @@
+# Pilot configuration — StressTestRAG
+# Values follow the assignment document. Do not change without a schema note
+# in CHANGELOG.md.
+
+corpus:
+  documents_per_domain: 4
+  domains: [natural_disaster, infrastructure_disruption, cyber_incident_response]
+
+chunking:
+  method: semantic_paragraph
+  target_tokens_min: 180
+  target_tokens_max: 320
+  overlap_tokens_min: 30
+  overlap_tokens_max: 50
+
+baseline:
+  questions_per_domain: 10
+  total: 30
+
+stress:
+  variants_per_baseline: 5
+  total_samples: 180
+  categories:
+    - {name: calm,                   default_intensity: 0}
+    - {name: anxious,                default_intensity: 1}
+    - {name: panicked,               default_intensity: 3}
+    - {name: angry_frustrated,       default_intensity: 2}
+    - {name: cognitively_overloaded, default_intensity: 3}
+    - {name: fragmented_telegraphic, default_intensity: 2}
+    - {name: typo_heavy_informal,    default_intensity: 2}
+    - {name: urgent_time_pressured,  default_intensity: 3}
+    - {name: distrustful_hostile,    default_intensity: 2}
+
+quality_control:
+  min_semantic_equivalence: 4
+  max_near_duplicate_rate: 0.02
+  exact_duplicates_allowed: 0
+  scenario_leakage_allowed: 0
+
+split:
+  group_by: scenario_id
+  train: 0.70
+  validation: 0.15
+  test: 0.15
+
+agreement_targets:
+  fleiss_kappa: 0.70
+  krippendorff_alpha: 0.67
+  equivalence_and_answerability: 0.80

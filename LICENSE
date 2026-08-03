@@ -1,0 +1,17 @@
+LICENSE — PENDING SUPERVISOR CONFIRMATION
+
+The licence for this repository has not yet been chosen.
+
+Two decisions are required before the first public release:
+
+1. CODE licence — for scripts in scripts/, src/, and tests/.
+   Common choice for research code: MIT or Apache-2.0.
+
+2. DATA licence — for the dataset in data/final/.
+   Common choice for research datasets: CC-BY-4.0.
+
+Note that source documents remain the property of their publishers. This
+repository does not relicense them. Where redistribution rights are unclear,
+only metadata, URLs, checksums, and extraction scripts are stored.
+
+Replace this file with the chosen licence text before tagging v0.9.0.

@@ -1,0 +1,48 @@
+# Python
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Environment & secrets
+.env
+.env.*
+*.key
+*.pem
+credentials.json
+secrets.yaml
+
+# Models & caches (never commit these)
+models/
+.cache/
+*.bin
+*.safetensors
+embeddings_cache/
+
+# Vector index artifacts
+*.faiss
+index/
+qdrant_storage/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Build & logs
+build/
+dist/
+logs/
+*.log
+
+# Do NOT ignore .gitkeep
+!.gitkeep
