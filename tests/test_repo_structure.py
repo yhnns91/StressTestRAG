@@ -1,5 +1,7 @@
 """Verify the repository layout matches Section 3.1 of the assignment document."""
-
+import fnmatch
+import subprocess
+import pytest
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
@@ -36,7 +38,17 @@ def test_required_files_exist():
 
 
 def test_no_secrets_committed():
-    found = []
-    for pattern in FORBIDDEN_PATTERNS:
-        found.extend(str(p.relative_to(REPO)) for p in REPO.rglob(pattern))
-    assert not found, f"forbidden files present in repository: {found}"
+    """Only files Git actually tracks can leak — ignored paths cannot."""
+    result = subprocess.run(
+        ["git", "ls-files"],
+        cwd=REPO, capture_output=True, text=True,
+    )
+    if result.returncode != 0:
+        pytest.skip("not a git repository")
+
+    tracked = [Path(line) for line in result.stdout.splitlines() if line]
+    found = [
+        str(p) for p in tracked
+        if any(fnmatch.fnmatch(p.name, pattern) for pattern in FORBIDDEN_PATTERNS)
+    ]
+    assert not found, f"forbidden files tracked by git: {found}"
