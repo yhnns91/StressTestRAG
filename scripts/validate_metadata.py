@@ -227,10 +227,10 @@ def main() -> int:
             print(f"  ERROR  {e}")
 
         if rep.errors:
-            print(f"  → FAILED ({len(rep.errors)} error, {len(rep.warnings)} warning)")
+            print(f"  -> FAILED ({len(rep.errors)} error, {len(rep.warnings)} warning)")
             exit_code = 1
         else:
-            print(f"  → PASSED ({len(rep.warnings)} warning)")
+            print(f"  -> PASSED ({len(rep.warnings)} warning)")
 
     return exit_code
 
