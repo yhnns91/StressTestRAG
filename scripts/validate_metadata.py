@@ -145,7 +145,7 @@ def check_rows(df: pd.DataFrame, rep: Report) -> None:
         if lic not in VALID_LICENSE_STATUS:
             rep.error(n, f"license_status '{lic}' not in {sorted(VALID_LICENSE_STATUS)}")
         if lic == "metadata_only_until_verified":
-            rep.warn(n, f"{doc_id}: license still unverified — open a needs-review issue before storing full text")
+            rep.warn(n, f"{doc_id}: license still unverified - open a needs-review issue before storing full text")
         if lic == "excluded":
             notes = str(row["notes"]).strip()
             if not notes or notes.lower() in {"nan", "none", "-"}:
@@ -156,7 +156,7 @@ def check_rows(df: pd.DataFrame, rep: Report) -> None:
         if safety not in VALID_SAFETY_LEVELS:
             rep.error(n, f"safety_level '{safety}' not in {sorted(VALID_SAFETY_LEVELS)}")
         if safety == "high":
-            rep.warn(n, f"{doc_id}: safety_level is 'high' — confirm the document contains no excluded content")
+            rep.warn(n, f"{doc_id}: safety_level is 'high' - confirm the document contains no excluded content")
 
         # --- download_date ---
         raw_date = str(row["download_date"]).strip()
