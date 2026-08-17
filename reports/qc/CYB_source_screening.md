@@ -157,6 +157,49 @@ design, in line with Section 2.3.
      — evidence: p.41, Appendix H "Hot debrief guidance - Content"
      — type: procedural_guidance
 
+### CYB-004 — Incident Response Recommendations and Considerations for Cybersecurity Risk Management (NIST SP 800-61r3)
+
+- **Publisher:** National Institute of Standards and Technology (NIST), U.S. Department of
+  Commerce — nvlpubs.nist.gov
+- **Why authoritative:** NIST is the US federal standards body for cybersecurity guidance.
+  The document is a numbered Special Publication with a registered DOI
+  (10.6028/NIST.SP.800-61r3), published through the official NIST publications repository.
+- **Why stable:** A standards publication, not a live alert or news item. Dated April 2025
+  and carrying a formal revision identifier. It supersedes SP 800-61r2, which was withdrawn
+  in April 2025 and rejected during this screening for that reason.
+- **Structure:** 48 pages, approximately 14,196 words. Only the Executive Summary and
+  Sections 1-2 (PDF pages 9-17) consist of prose. Section 3 is a CSF element reference
+  table whose rows follow a fixed "CSF Element / Description / Priority / Recommendations"
+  format, with many cells containing only cross-references such as "N1: See the notes for
+  PR."; that structure does not preserve a self-contained unit of meaning and is unsuitable
+  for semantic chunking. The remainder is references, acronyms, glossary and change log.
+  The document's scope is therefore limited to PDF pages 9-17.
+- **License status:** Public domain. The document states that it "is not subject to
+  copyright in the United States", adding that attribution is appreciated by NIST. As a US
+  Government work there is no redistribution restriction, so the record is marked
+  `public_domain` and full text may be stored.
+- **Safety level:** `low`. The schema defines `low` as "general guidance, no sensitive
+  detail". The publication explicitly removed procedural content: Section 1.1 states that
+  "the details of how to perform incident response activities change so often and vary so
+  much across technologies, environments, and organizations, it is no longer feasible to
+  capture and maintain that information in a single static publication". A keyword check
+  found `exploit` and `persistence` used only descriptively, for example "eradication may
+  be necessary to eliminate persistence mechanisms", with no technical steps given.
+- **Candidate baseline questions:**
+  1. What reason does the publication give for no longer providing detailed incident
+     response procedures?
+     — evidence: p.11, Section 1.1 "Purpose and Scope"
+     — type: factual_information
+  2. Is incident response best handled as a separate set of activities performed by a
+     separate team?
+     — evidence: p.12, Section 2.1 "Incident Response Life Cycle Model"
+     — type: misinformation_correction
+  3. Which of the six CSF 2.0 Functions support preparation rather than incident response
+     itself?
+     — evidence: p.13, Section 2.1 "Incident Response Life Cycle Model"
+     — type: clarification
+
+
 ## 4. Excluded candidates
 
 | Candidate | Reason for exclusion |
