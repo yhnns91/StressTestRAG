@@ -2,7 +2,7 @@
 
 - **Issue:** #7
 - **Branch:** `task/issue-007-cyber-corpus-metadata`
-- **Commit:** `322cea1`
+- **Commit:** `00bbabb`
 - **Date:** 2026-08-13
 
 ---
