@@ -83,6 +83,38 @@ design, in line with Section 2.3.
      — evidence: p.9, Step 3 "If you manage your own IT: put your plan into action"
      — type: procedural_guidance
 
+### CYB-002 — Cyber Incident Response Plan Guidance
+
+- **Publisher:** Australian Cyber Security Centre (ACSC), Australia — cyber.gov.au
+- **Why authoritative:** The ACSC is Australia's national cyber security agency, part of
+  the Australian Signals Directorate. The document is published on the cyber.gov.au domain
+  as official agency guidance.
+- **Why stable:** A standing planning template, not a live alert or news item. The document
+  carries no printed publication date; 2022 was inferred from the title of Appendix K,
+  "ACSC Incident Categorisation Matrix 2022". The URL path folder (2023-03) was not used as
+  the basis, since ACSC folder years reflect upload date rather than publication date — a
+  point demonstrated by CYB-003, which sits in a 2025-10 folder despite being dated
+  December 2024. The document is superseded in substance by CYB-003 but remains published.
+- **Structure:** 56 pages, approximately 10,713 words. Fourteen numbered chapters followed
+  by Appendices A-K. The document is a fill-in template rather than narrative guidance:
+  39 passages take the form "Include information about...", several appendices are blank
+  tables, and the worked examples are marked "demonstrative only, and should not be used as
+  the basis of your CIRP". Only Appendices A (terminology), B (readiness checklist) and
+  H (post-incident review) consist of usable prose.
+- **License status:** CC BY 4.0. No licence statement appears anywhere inside the PDF; the
+  status was determined from https://www.cyber.gov.au/about-us/copyright, which states that
+  ACSC material is released under a Creative Commons Attribution 4.0 International licence.
+  The source of this determination is recorded in the metadata `notes` column, since it is
+  external to the document itself.
+- **Safety level:** `medium`. The schema defines `medium` as "contains procedural detail
+  that must be quoted carefully". The document covers notification and reporting
+  obligations to ASD and the OAIC, where an incorrectly grounded answer could lead an
+  organisation to miss a regulatory duty, and it sets out evidence handling procedures
+  where careless quotation could compromise the evidential value of collected material.
+- **Role in the dataset:** No candidate baseline questions are drawn from this document.
+  Under decision 7.1, CYB-003 is the sole ground-truth source for the ACSC material.
+  CYB-002 is chunked and indexed so that it functions as a realistic near-duplicate
+  distractor during retrieval, but no expected_retrieval_chunk_ids will reference it.
 
 ## 4. Excluded candidates
 
