@@ -116,6 +116,47 @@ design, in line with Section 2.3.
   CYB-002 is chunked and indexed so that it functions as a realistic near-duplicate
   distractor during retrieval, but no expected_retrieval_chunk_ids will reference it.
 
+### CYB-003 — Cybersecurity incident response planning: Practitioner guidance
+
+- **Publisher:** Australian Signals Directorate (ASD) / Australian Cyber Security Centre,
+  Australia — cyber.gov.au
+- **Why authoritative:** The ASD is Australia's national signals intelligence and cyber
+  security agency, and the ACSC operates within it. The document is published on the
+  cyber.gov.au domain as official agency guidance.
+- **Why stable:** A standing planning guide, not a live alert or news item. The document
+  records two dates on its cover: first published January 2022, last updated December 2024.
+  The December 2024 version is the one downloaded and checksummed. It is the current
+  revision of the ACSC incident response planning material and cites ISO/IEC 27035-1:2023
+  and 27035-2:2023.
+- **Structure:** 51 pages, approximately 9,510 words. Fourteen numbered chapters followed
+  by Appendices A-K. The numbered chapters are largely fill-in template instructions — 30
+  passages take the form "Include information about..." — and Appendices D, E, F, G and I
+  are blank tables. Appendices A (terminology and definitions), B (readiness checklist) and
+  H (post cybersecurity incident reviews) consist of usable prose with clear headings, and
+  the document's scope is limited to those three appendices for chunking purposes.
+- **License status:** CC BY 4.0, stated on the final page of the document: "© Commonwealth
+  of Australia 2024 ... provided under a Creative Commons Attribution 4.0 International
+  licence". Redistribution is permitted with attribution, so the record is marked
+  `open_license_redistributable` and full text may be stored.
+- **Safety level:** `medium`. The schema defines `medium` as "contains procedural detail
+  that must be quoted carefully". The document covers notification and reporting
+  obligations to ASD and the OAIC, where an incorrectly grounded answer could lead an
+  organisation to miss a regulatory duty, and it sets out evidence handling procedures
+  where careless quotation could compromise the evidential value of collected material.
+  The same value is assigned to CYB-002, since the two documents share this content.
+- **Role in the dataset:** Under decision 7.1, this document is the sole ground-truth
+  source for the ACSC material.
+- **Candidate baseline questions:**
+  1. What is the difference between a hot debrief and a formal debrief?
+     — evidence: p.41, Appendix H "Step 1 - Hold cybersecurity incident debriefs"
+     — type: clarification
+  2. How does the guidance define a cybersecurity incident?
+     — evidence: p.31, Appendix A "Terminology and definitions"
+     — type: factual_information
+  3. Which questions could a facilitator use to guide discussion during a hot debrief?
+     — evidence: p.41, Appendix H "Hot debrief guidance - Content"
+     — type: procedural_guidance
+
 ## 4. Excluded candidates
 
 | Candidate | Reason for exclusion |
