@@ -2,7 +2,7 @@
 
 - **Issue:** #12
 - **Branch:** `task/issue-012-infrastructure-corpus-metadata`
-- **Commit:** `<isi sebelum push terakhir>`
+- **Commit:** `36cd55c`
 - **Date:** 2026-08-18
 
 ---
