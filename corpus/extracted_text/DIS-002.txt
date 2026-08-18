@@ -41,14 +41,8 @@ based on the type of flooding.
  Stay where you are.
 HOW TO STAY SAFE
 WHEN A FLOOD THREATENS
-Prepare Survive Be Safe
-NOW DURING AFTER
-Take an Active Role
-in Your Safety
-Go to Ready.gov/floods.
-Download the FEMA app to
-get more information about
-preparing for a flood.
+Prepare
+NOW
 Know your area’s type of flood risk.
 Visit FEMA’s Flood Map Service
 Center at https://msc.fema.gov/
@@ -84,6 +78,8 @@ Protect your property. Move valued
 items to higher levels. Declutter drains
 and gutters. Install check valves.
 Consider a sump pump with a battery.
+Survive
+DURING
 Depending on where you are, and
 the impact and the warning time of
 flooding, go to the safe location that
@@ -117,6 +113,8 @@ trapped by rising floodwater. Go on
 the roof only if necessary. Signal for
 help.
 FEMA V-1005
+Be Safe
+AFTER
 Pay attention to authorities for
 information and instructions.
 Avoid driving, except in
@@ -138,3 +136,9 @@ Do not touch electrical equipment
 if it is wet or if you are standing in
 water. If it is safe to do so, turn off the
 electricity to prevent electric shock.
+Take an Active Role
+in Your Safety
+Go to Ready.gov/floods.
+Download the FEMA app to
+get more information about
+preparing for a flood.

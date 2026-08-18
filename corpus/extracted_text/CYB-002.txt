@@ -1,13 +1,10 @@
 Cyber Incident Response Plan
 Appendix A
 Terminology and Definitions
-Cyber threat
-Cyber security event
-Cyber security alert
-Cyber incident
 Use of consistent and pre-defined terminology to describe incidents and their effects can be helpful
 during a response. In your CIRP, include commonly used terms used in your organisation. ACSC defines
 cyber threats, events, alerts and incidents as follows:
+Cyber threat
 A cyber threat is any circumstance or event with the potential to harm systems or information.
 Other threats are listed on cyber.gov.au. Organisations can include a list of cyber threats of concern.
 The ACSC Annual Cyber Threat Report (2021) outlines the following threat environment and key cyber
@@ -16,6 +13,7 @@ security trends:
 including phishing emails and scams • Software supply chain compromise
 • Exploitation of security vulnerabilities • Cybercrime
 • Business Email Compromise
+Cyber security event
 A cyber security event is an occurrence of a system, service or network state indicating a possible
 breach of security policy, failure of safeguards or a previously unknown situation that may be
 relevant to security.
@@ -25,8 +23,10 @@ Examples of cyber security events include (but are not limited to):
 • A user has deleted or modified system files
 • A user restarted a server
 • Unauthorised access to a server or system.
+Cyber security alert
 A cyber security alert is a notification generated in response to a deviation from normal behaviour.
 Cyber security alerts are used to highlight cyber security events.
+Cyber incident
 A cyber incident is an unwanted or unexpected cyber security event, or a series of such events,
 that have a significant probability of compromising business operations. A cyber incident requires
 corrective action.
