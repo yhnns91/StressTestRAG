@@ -92,7 +92,10 @@
       "file": "INF/INF-002_CPSC_portable_generator_hazards.pdf",
       "type": "pdf",
       "scope": "full",
-      "reason": "1-page safety alert, four headed blocks."
+      "reason": "1-page safety alert, four headed blocks. The page is set in two columns whose gutter is too narrow for automatic detection, so the boundary is given explicitly at x=305; without it the Carbon Monoxide, Electrical and Fire hazard blocks interleave line by line.",
+      "column_splits": [
+        305
+      ]
     },
     "INF-003": {
       "file": "INF/INF-003_USDA_keep_food_safe_emergencies.html",

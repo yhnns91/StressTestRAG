@@ -28,6 +28,9 @@ import sys
 from datetime import date
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from columns import page_text  # noqa: E402  (path set above)
+
 REPO_ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = REPO_ROOT / "configs" / "extraction_rules.json"
 OUTPUT_DIR = REPO_ROOT / "corpus" / "extracted_text"
@@ -107,17 +110,18 @@ def extract_pdf(path: Path, rule: dict, doc_id: str) -> tuple[str, dict]:
         else:
             selected = range(total_pages)
 
+        splits = rule.get("column_splits")
         for i in selected:
-            # layout=True preserves reading order on multi-column pages, which
-            # matters for the infographic-style hazard sheets.
-            page_text = pdf.pages[i].extract_text(layout=True) or ""
-            pages_text.append(page_text)
+            # Multi-column infographic pages must be read column by column, or the
+            # sections interleave line by line. See columns.py for the reasoning.
+            pages_text.append(page_text(pdf.pages[i], splits=splits))
 
     text = PAGE_BREAK.join(pages_text)
     if scope == "markers":
         text = slice_by_markers(text, rule.get("start_marker"), rule.get("end_marker"), doc_id)
 
-    info = {"total_pages": total_pages, "pages_extracted": len(pages_text)}
+    info = {"total_pages": total_pages, "pages_extracted": len(pages_text),
+            "column_splits": rule.get("column_splits")}
     return normalise_whitespace(text), info
 
 
