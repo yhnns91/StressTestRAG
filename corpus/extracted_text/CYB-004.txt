@@ -1,421 +1,317 @@
-NIST SP 800-61r3                         Incident Response Recommendations and
-          April 2025                              Considerations for Cyber Risk Management
-
-          Executive Summary
-
-          Incident response is a critical part of cybersecurity risk management and should be integrated
-          across organizational operations. All six NIST Cybersecurity Framework (CSF) 2.0 Functions play
-          vital roles in incident response:
-
-            •  Govern, Identify, and Protect help organizations prevent some incidents, prepare to
-               handle incidents that do occur, reduce the impact of those incidents, and improve
-               incident response and cybersecurity risk management practices based on lessons
-               learned from those incidents.
-
-            •  Detect, Respond, and Recover help organizations discover, manage, prioritize, contain,
-               eradicate, and recover from cybersecurity incidents, as well as perform incident
-               reporting, notification, and other incident-related communications.
-          Many individuals, teams, and third parties hold a wide variety of roles and responsibilities
-
-          across all of the Functions that support an organization’s incident response. Organizations have
-          no direct control over the tactics and techniques used by their adversaries, nor are they certain
-          about the timing of a future incident other than knowing that another incident is inevitable.
-          However, organizations can use an incident response life cycle framework or model that best
-          suits them to develop strong cybersecurity risk management practices that reduce their risks to
-          acceptable levels.
-
-          This publication uses the CSF 2.0 Functions, Categories, and Subcategories to organize its
-          recommendations, considerations, and other information regarding incident response as a CSF
-          2.0 Community Profile. Doing so provides a common taxonomy that is already widely used for
-          communicating about incident response and cybersecurity risk management and governance.
-          This also enables organizations to access a range of online resources mapped to each Function,
-          Category, and Subcategory through the NIST Cybersecurity and Privacy Reference Tool (CPRT).
-
-          These resources include mappings to other incident response and cybersecurity risk
-          management standards and guidance, as well as sources of implementation guidance that
-          organizations can choose to utilize as needed.
-          Organizations should use the incident response life cycle framework or model that suits them
-
-          best. The model in this document is based on CSF 2.0 to take advantage of the wealth of
-          resources available for CSF 2.0 and aid organizations that are already using the CSF. Regardless
-          of the incident response life cycle framework or model used, every organization should take
-          incident response into consideration throughout their cybersecurity risk management activities.
-
-                                          1
-
-          NIST SP 800-61r3                         Incident Response Recommendations and
-          April 2025                              Considerations for Cyber Risk Management
-
-          1. Introduction
-
-          Within this document, an event is any observable occurrence that involves computing assets,
-          including physical and virtual platforms, networks, services, and cloud environments. Examples
-          of events are user login attempts, the installation of software updates, and an application
-          responding to a transaction request. Many events focus on security or have security
-          implications. Adverse events are any events associated with a negative consequence regardless
-          of cause, including natural disasters, power failures, or cybersecurity attacks. This guide
-          addresses only adverse cybersecurity events. Additional analysis is often needed to determine
-
-          whether adverse cybersecurity events indicate that a cybersecurity incident has occurred.
-          A cybersecurity incident (or simply incident) is
-
-                  …an occurrence that actually or imminently jeopardizes, without lawful
-                  authority, the integrity, confidentiality, or availability of information or
-                  an information system; or constitutes a violation or imminent threat of
-                  violation of law, security policies, security procedures, or acceptable use
-                  policies. [FISMA2014]
-
-          Examples of incidents include an attacker:
-            •  Employing a botnet to send high volumes of connection requests to an internet-facing
-
-               service, making it unavailable to legitimate service users
-            •  Obtaining administrative credentials at a software-as-a-service provider, which puts
-               sensitive tenant data entrusted to that provider at risk
-
-            •  Intruding upon an organization’s business network to steal credentials and use them to
-               instruct industrial control systems to shut down or destroy critical physical components,
-               causing a major service disruption
-
-            •  Deploying ransomware to prevent the use of computer systems and cause multiple data
-               breaches by copying files from those systems
-
-            •  Using phishing emails to compromise user accounts and using those accounts to commit
-               financial fraud
-            •  Identifying a new vulnerability in network management appliances and exploiting the
-
-               vulnerability to gain unauthorized access to network communications
-            •  Compromising a vendor’s software, which is subsequently distributed to customers in its
-               compromised state
-
-          Because of the damage that cybersecurity incidents can inflict on organizations and their
-          customers, business partners, and others, it is vital to respond quickly and effectively when an
-          incident occurs. Effective implementation of incident response processes enables systematic
-          responses to and recovery from incidents by analyzing information and taking appropriate
-          action. This reduces cybersecurity and enterprise risks by minimizing data loss or theft, the
-
-          disruption of services, and the overall impact of incidents. Lessons learned from incident
-          response activities and root cause analysis help improve cybersecurity risk management and
-
-                                          2
-
-          NIST SP 800-61r3                         Incident Response Recommendations and
-          April 2025                              Considerations for Cyber Risk Management
-
-          governance efforts and ensure that the organization is better prepared to identify its current
-          technology assets and cybersecurity risks, protect its assets, and detect, respond to, and
-          recover from future incidents.
-
-          1.1. Purpose and Scope
-
-          This publication seeks to help organizations incorporate cybersecurity incident response
-          recommendations and considerations throughout their cybersecurity risk management
-          activities. It also provides a common language that all organizations can use to communicate
-          internally and externally regarding their incident response plans and activities.
-
-          The scope of this publication differs significantly from previous versions. Because the details of
-          how to perform incident response activities change so often and vary so much across
-          technologies, environments, and organizations, it is no longer feasible to capture and maintain
-          that information in a single static publication. Instead, this version focuses on improving
-          cybersecurity risk management for all of the NIST Cybersecurity Framework (CSF) 2.0 Functions
-          [CSF2.0] to better support an organization’s incident response capabilities.
-
-          Readers are encouraged to utilize other NIST resources in conjunction with this document,
-          including the CSF 2.0 publication and supplemental resources, the Incident Response project
-          page, and mappings to additional sources of information on implementing incident response
-          considerations available through the NIST Cybersecurity and Privacy Reference Tool (CPRT). An
-          example of a CPRT mapping is associating CSF 2.0 outcomes with NIST Special Publication (SP)
-          800-53 controls that can be implemented to help achieve the outcomes. In this way, CSF 2.0
-
-          provides a common language that facilitates access to a large number of other resources.
-          This publication supersedes SP 800-61r2 (Revision 2), Computer Security Incident Handling
-          Guide [SP800-61r2].
-
-          1.2. Document Structure
-
-          The remainder of this document is organized into the following sections and appendices:
-            •  Section 2 discusses how incident response has evolved to become a critical part of
-               cybersecurity risk management, as well as how the concept of the incident response life
-
-               cycle has changed to reflect that.
-            •  Section 3 presents incident response recommendations and considerations for an
-               organization’s cybersecurity risk management practices. They are organized and
-               documented as a CSF 2.0 Community Profile.
-
-            •  The References section lists references cited throughout this publication.
-
-            •  Appendix A and Appendix B provide an acronyms list and a glossary, respectively.
-            •  Appendix C contains a change log of the major changes made since the previous
-
-               revision.
-
-                                          3
-
-          NIST SP 800-61r3                         Incident Response Recommendations and
-          April 2025                              Considerations for Cyber Risk Management
-
-          2. Incident Response as Part of Cybersecurity Risk Management
-
-          This section explains the fundamental concepts of incident response as an integral part of
-          cybersecurity risk management. Section 2.1 explores the incident response life cycle and
-          proposes a new life cycle model based on CSF 2.0 Functions. Section 2.2 discusses incident
-          response roles and responsibilities both inside and outside an organization. Finally, Section 2.3
-          briefly examines incident response policies, processes, and procedures.
-
-          2.1. Incident Response Life Cycle Model
-
-          Fig. 1 depicts the incident response life cycle model illustrated in the previous version of this
-          publication [SP800-61r2].
-
-                            Fig. 1. Previous incident response life cycle model
-
-          At that time, incidents were relatively rare, the scope of most incidents was narrow and well-
-          defined, and incident response and recovery was usually completed within a day or two. Under
-          those conditions, it was realistic to treat incident response as a separate set of activities
-          performed by a separate team of personnel and to depict all incident response activities as part
-          of a circular life cycle. Formal post-incident activities would identify needed improvements and
-
-          feed them into the preparation stage, thus starting the cycle again. Incident response activities
-          were typically intermittent rather than continuous.
-          However, the current state of incident response has greatly changed since then. Today,
-          incidents occur frequently and cause far more damage. Recovering from them often takes
-
-          weeks or months due to their breadth, complexity, and dynamic nature. Incident response is
-          now considered a critical part of cybersecurity risk management that should be integrated
-          across organizational operations. The lessons learned during incident response should often be
-          shared as soon as they are identified, not delayed until after recovery concludes. Continuous
-          improvement is increasingly necessary for all facets of cybersecurity risk management in order
-          to keep up with modern threats.
-
-                                          4
-
-          NIST SP 800-61r3                         Incident Response Recommendations and
-          April 2025                              Considerations for Cyber Risk Management
-
-          Fig. 2 shows a high-level incident response life cycle model based on the six CSF 2.0 Functions,
-          which organize cybersecurity outcomes at their highest level:
-
-            •  Govern (GV): The organization’s cybersecurity risk management strategy, expectations,
-               and policy are established, communicated, and monitored.
-            •  Identify (ID): The organization’s current cybersecurity risks are understood.
-
-            •  Protect (PR): Safeguards to manage the organization’s cybersecurity risks are used.
-
-            •  Detect (DE): Possible cybersecurity attacks and compromises are found and analyzed.
-            •  Respond (RS): Actions regarding a detected cybersecurity incident are taken.
-
-            •  Recover (RC): Assets and operations affected by a cybersecurity incident are restored.
-          All six Functions have vital roles in incident response. Govern, Identify, and Protect help
-
-          organizations prevent some incidents, prepare to handle incidents that do occur, reduce the
-          impact of those incidents, and improve incident response and cybersecurity risk management
-          practices based on lessons learned. Detect, Respond, and Recover help organizations discover,
-          manage, prioritize, contain, eradicate, and recover from cybersecurity incidents, as well as
-          perform incident reporting, notification, and other incident-related communications.
-
-                       Fig. 2. Incident response life cycle model based on CSF 2.0 Functions
-
-          The bottom level reflects that the preparation activities of Govern, Identify, and Protect are not
-          part of the incident response itself. Rather, they are much broader cybersecurity risk
-          management activities that also support incident response. Incident response is shown in the
-          top level of the figure: Detect, Respond, and Recover. Additionally, the need for continuous
-          improvement is indicated as the middle level with the Improvement Category (ID.IM) within the
-          Identify Function and the dashed green lines. Lessons learned from performing all activities in
-
-          all Functions are fed into Improvement, and those lessons are analyzed, prioritized, and used to
-          inform all of the Functions. This reflects that organizations can learn new lessons at all times
-
-                                          5
-
-          NIST SP 800-61r3                         Incident Response Recommendations and
-          April 2025                              Considerations for Cyber Risk Management
-
-          (e.g., detecting the presence of a new threat and characterizing its behavior) and communicate
-          those lessons to the appropriate personnel so that the organization’s incident response and
-          other cybersecurity risk management policies, processes, and practices can be adjusted as
-          needed.
-
-          Table 1 maps the previous SP 800-61 incident response life cycle model’s phases to the
-          corresponding CSF 2.0 Functions used in this document.
-
-              Table 1. Previous incident response life cycle model’s phases and corresponding CSF 2.0 Functions
-
-                Previous Incident Response Life Cycle Model Phase CSF 2.0 Functions
-
-                                                Govern
-                Preparation                     Identify (all Categories)
-
-                                                Protect
-
-                                                Detect
-                Detection & Analysis
-                                                Identify (Improvement Category)
-                                                Respond
-
-                Containment, Eradication & Recovery Recover
-
-                                                Identify (Improvement Category)
-                Post-Incident Activity          Identify (Improvement Category)
-
-          Organizations should use the incident response life cycle framework or model that suits them
-          best. The model in this document is based on CSF 2.0 to take advantage of the wealth of
-
-          resources available for CSF 2.0 and aid organizations that are already using the CSF. The
-          appropriate incident response life cycle framework or model for an organization depends on
-          many factors; for example, larger and more technology-dependent organizations are likely to
-          benefit more from using a framework or model emphasizing continuous improvement than
-          other organizations would. Regardless of the incident response life cycle framework or model
-          used, every organization should take incident response into consideration throughout their
-          cybersecurity risk management activities.
-
-          2.2. Incident Response Roles and Responsibilities
-
-          In the past, incident response activities were performed almost exclusively by incident handlers
-          from the organization’s own incident response team. Today, while incident handlers are still
-          critically important, most organizations increasingly recognize that the success of their incident
-          response efforts depend on the participation of many internal and external parties who hold a
-          wide variety of roles and responsibilities and may be spread around the world. Roles and
-          responsibilities will differ for each organization and may also differ within an organization based
-
-          on the nature of a particular incident.
-
-                                          6
-
-          NIST SP 800-61r3                         Incident Response Recommendations and
-          April 2025                              Considerations for Cyber Risk Management
-
-          Examples of incident response roles and responsibilities include the following:
-            •  Leadership. The organization’s leadership team oversees incident response, allocates
-
-               funding, and may have decision-making authority on high-impact response actions, such
-               as shutting down or rebuilding critical services.
-            •  Incident handlers. Incident handlers verify that an incident has occurred, collect and
-               analyze data and evidence, prioritize incident response activities, and act appropriately
-
-               to limit damage, find root causes, and restore operations. Incident handlers also often
-               provide input to others on mitigating cybersecurity issues and improving resiliency. An
-               organization’s incident handlers might be:
-                    On staff (e.g., an incident response team),
-                 o
-                    On contract (e.g., outsourcing a security operations center [SOC] to a managed
-                 o
-                    security services provider [MSSP] or leveraging a cloud service provider’s
-                    incident response team when an incident occurs within that provider’s cloud),
-                    and/or
-                    Available when needed (e.g., from a parent organization, a cybersecurity services
-                 o
-                    provider, a business partner, or a law enforcement agency).
-               Many organizations may use more than one of these approaches, such as internally
-               performing basic incident response and engaging third-party resources for assistance
-               with certain incidents. Larger organizations may have multiple incident response teams,
-               with each team responsible for a particular logical or physical segment of the
-               organization. When this model is employed, the teams should be part of a single
-               coordinated entity (e.g., a federation) to ensure that incident response processes,
-               procedures, and training are consistent across the organization and that information is
-
-               shared among teams.
-            •  Technology professionals. Cybersecurity, privacy, system, network, cloud, and other
-               technology architects, engineers, and administrators, as well as software developers,
-
-               may be involved in incident response and recovery efforts.
-            •  Legal. Legal experts can review incident response plans, policies, and procedures to
-               ensure compliance with applicable laws and regulations, including the right to privacy.
-               Legal experts can also review contracts with technology suppliers and other third parties
-
-               when there are incident response implications. In addition, incident responders can seek
-               guidance from their organization’s legal department if a particular incident may have
-               legal ramifications, such as the prosecution of a suspect, lawsuits, or situations that
-               require a memorandum of understanding (MOU) or other binding agreement.
-            •  Public affairs and media relations. Depending on the nature and impact of an incident,
-
-               it may be necessary to inform the media and, by extension, the public. Sometimes, the
-               media learns of incidents through alternate sources (i.e., not through public affairs
-               personnel). Having a media engagement strategy in place can greatly aid in this
-               situation.
-
-                                          7
-
-          NIST SP 800-61r3                         Incident Response Recommendations and
-          April 2025                              Considerations for Cyber Risk Management
-
-            •  Human resources. Certain human resources practices should consider cybersecurity risk
-               management, including pre-employment screening and employee onboarding,
-               offboarding, and position changes. Human resources may also be involved if an
-               employee is suspected of intentionally causing an incident.
-
-            •  Physical security and facilities management. Some computer security incidents occur
-               through physical security breaches or involve coordinated logical and physical attacks.
-               The incident response team may also need access to facilities during incident handling
-               (e.g., to access a compromised workstation in a locked office).
-
-            •  Asset owners. Asset owners (e.g., system owners, data owners, and business process
-               owners) may have valuable insights on response and recovery priorities for their
-               affected assets. They also need to be kept up to date on the status of response and
-               recovery efforts.
-
-          Third parties may be under contract with an organization to help perform incident response
-          activities. Some third parties may fill a primary role (e.g., an MSSP performing incident
-          detection, response, and recovery activities), while other parties (e.g., cloud service providers
-          [CSPs] and internet service providers [ISPs]) may be involved in certain incident response
-          activities for particular types of incidents. This is a shared responsibility model in which the
-
-          organization transfers some of its responsibilities to a provider. These responsibilities should be
-          clearly defined in a contract, and the incident response team should be aware of the division of
-          responsibilities, including information flows, coordination, and authority to act on behalf of the
-          organization. This also includes restrictions on what the service provider can do, such as sharing
-          sanitized incident information with other customers or making and implementing operational
-          decisions (e.g., immediately deactivating certain services to contain an incident).
-
-          A service provider may detect malicious activity sooner than individual organizations would
-          because it can correlate events across its customers. In some situations, a service provider
-          might be able to use knowledge of an incident with one customer to proactively prevent similar
-          incidents with its other customers. Service providers often have privileged access to
-          organizational systems and may also have access to sensitive organizational data. Accordingly,
-          the risk of malicious insiders or the service provider being compromised should be considered
-          and addressed. Non-disclosure agreements (NDAs) and contracting clauses are options for
-
-          deterring the unauthorized disclosure of sensitive data.
-
-          2.3. Incident Response Policies, Processes, and Procedures
-
-          Organizations should have policies that govern their cybersecurity incident response. While a
-          policy is highly individualized to the organization, most incident response policies include the
-          same key elements:
-
-            •  Statement of management commitment
-
-            •  Purpose and objectives of the policy
-            •  Scope of the policy (i.e., to whom and what it applies and under what circumstances)
-
-                                          8
-
-          NIST SP 800-61r3                         Incident Response Recommendations and
-          April 2025                              Considerations for Cyber Risk Management
-
-            •  Definition of events, cybersecurity incidents, investigations, and related terms
-            •  Roles, responsibilities, and authorities, such as which roles have the authority to
-
-               confiscate, disconnect, or shut down technology assets
-            •  Guidelines for prioritizing incidents, estimating their severity, initiating recovery
-               processes, maintaining or restoring operations, and other key actions
-
-            •  Performance measures
-
-          Processes and procedures should be based on the incident response policy and plan.
-          Documented procedures should explain how technical processes and other operating
-          procedures should be performed. Procedures can be tested or exercised periodically to verify
-          their accuracy and can be used to help train new personnel. While it is impossible to have
-          detailed procedures for every possible situation, organizations should consider documenting
-          procedures for responding to the most common types of incidents and threats. Organizations
-          should also develop and maintain procedures for particularly important processes that may be
-
-          urgently needed during emergency situations, such as redeploying the organization’s primary
-          authentication platform.
-          Many organizations choose to create playbooks as part of documenting their procedures.
-          Playbooks provide actionable steps or tasks for people to perform during various scenarios or
-          situations. Formatting procedures within a playbook instead of another format can improve
-
-          their usability. See the Cybersecurity and Infrastructure Security Agency (CISA) Cybersecurity
-          Incident & Vulnerability Response Playbooks [CISA-PB] for incident response playbook
-          examples.
-
-                                          9
+NIST SP 800-61r3 Incident Response Recommendations and
+April 2025 Considerations for Cyber Risk Management
+Executive Summary
+Incident response is a critical part of cybersecurity risk management and should be integrated
+across organizational operations. All six NIST Cybersecurity Framework (CSF) 2.0 Functions play
+vital roles in incident response:
+• Govern, Identify, and Protect help organizations prevent some incidents, prepare to
+handle incidents that do occur, reduce the impact of those incidents, and improve
+incident response and cybersecurity risk management practices based on lessons
+learned from those incidents.
+• Detect, Respond, and Recover help organizations discover, manage, prioritize, contain,
+eradicate, and recover from cybersecurity incidents, as well as perform incident
+reporting, notification, and other incident-related communications.
+Many individuals, teams, and third parties hold a wide variety of roles and responsibilities
+across all of the Functions that support an organization’s incident response. Organizations have
+no direct control over the tactics and techniques used by their adversaries, nor are they certain
+about the timing of a future incident other than knowing that another incident is inevitable.
+However, organizations can use an incident response life cycle framework or model that best
+suits them to develop strong cybersecurity risk management practices that reduce their risks to
+acceptable levels.
+This publication uses the CSF 2.0 Functions, Categories, and Subcategories to organize its
+recommendations, considerations, and other information regarding incident response as a CSF
+2.0 Community Profile. Doing so provides a common taxonomy that is already widely used for
+communicating about incident response and cybersecurity risk management and governance.
+This also enables organizations to access a range of online resources mapped to each Function,
+Category, and Subcategory through the NIST Cybersecurity and Privacy Reference Tool (CPRT).
+These resources include mappings to other incident response and cybersecurity risk
+management standards and guidance, as well as sources of implementation guidance that
+organizations can choose to utilize as needed.
+Organizations should use the incident response life cycle framework or model that suits them
+best. The model in this document is based on CSF 2.0 to take advantage of the wealth of
+resources available for CSF 2.0 and aid organizations that are already using the CSF. Regardless
+of the incident response life cycle framework or model used, every organization should take
+incident response into consideration throughout their cybersecurity risk management activities.
+1
+NIST SP 800-61r3 Incident Response Recommendations and
+April 2025 Considerations for Cyber Risk Management
+1. Introduction
+Within this document, an event is any observable occurrence that involves computing assets,
+including physical and virtual platforms, networks, services, and cloud environments. Examples
+of events are user login attempts, the installation of software updates, and an application
+responding to a transaction request. Many events focus on security or have security
+implications. Adverse events are any events associated with a negative consequence regardless
+of cause, including natural disasters, power failures, or cybersecurity attacks. This guide
+addresses only adverse cybersecurity events. Additional analysis is often needed to determine
+whether adverse cybersecurity events indicate that a cybersecurity incident has occurred.
+A cybersecurity incident (or simply incident) is
+…an occurrence that actually or imminently jeopardizes, without lawful
+authority, the integrity, confidentiality, or availability of information or
+an information system; or constitutes a violation or imminent threat of
+violation of law, security policies, security procedures, or acceptable use
+policies. [FISMA2014]
+Examples of incidents include an attacker:
+• Employing a botnet to send high volumes of connection requests to an internet-facing
+service, making it unavailable to legitimate service users
+• Obtaining administrative credentials at a software-as-a-service provider, which puts
+sensitive tenant data entrusted to that provider at risk
+• Intruding upon an organization’s business network to steal credentials and use them to
+instruct industrial control systems to shut down or destroy critical physical components,
+causing a major service disruption
+• Deploying ransomware to prevent the use of computer systems and cause multiple data
+breaches by copying files from those systems
+• Using phishing emails to compromise user accounts and using those accounts to commit
+financial fraud
+• Identifying a new vulnerability in network management appliances and exploiting the
+vulnerability to gain unauthorized access to network communications
+• Compromising a vendor’s software, which is subsequently distributed to customers in its
+compromised state
+Because of the damage that cybersecurity incidents can inflict on organizations and their
+customers, business partners, and others, it is vital to respond quickly and effectively when an
+incident occurs. Effective implementation of incident response processes enables systematic
+responses to and recovery from incidents by analyzing information and taking appropriate
+action. This reduces cybersecurity and enterprise risks by minimizing data loss or theft, the
+disruption of services, and the overall impact of incidents. Lessons learned from incident
+response activities and root cause analysis help improve cybersecurity risk management and
+2
+NIST SP 800-61r3 Incident Response Recommendations and
+April 2025 Considerations for Cyber Risk Management
+governance efforts and ensure that the organization is better prepared to identify its current
+technology assets and cybersecurity risks, protect its assets, and detect, respond to, and
+recover from future incidents.
+1.1. Purpose and Scope
+This publication seeks to help organizations incorporate cybersecurity incident response
+recommendations and considerations throughout their cybersecurity risk management
+activities. It also provides a common language that all organizations can use to communicate
+internally and externally regarding their incident response plans and activities.
+The scope of this publication differs significantly from previous versions. Because the details of
+how to perform incident response activities change so often and vary so much across
+technologies, environments, and organizations, it is no longer feasible to capture and maintain
+that information in a single static publication. Instead, this version focuses on improving
+cybersecurity risk management for all of the NIST Cybersecurity Framework (CSF) 2.0 Functions
+[CSF2.0] to better support an organization’s incident response capabilities.
+Readers are encouraged to utilize other NIST resources in conjunction with this document,
+including the CSF 2.0 publication and supplemental resources, the Incident Response project
+page, and mappings to additional sources of information on implementing incident response
+considerations available through the NIST Cybersecurity and Privacy Reference Tool (CPRT). An
+example of a CPRT mapping is associating CSF 2.0 outcomes with NIST Special Publication (SP)
+800-53 controls that can be implemented to help achieve the outcomes. In this way, CSF 2.0
+provides a common language that facilitates access to a large number of other resources.
+This publication supersedes SP 800-61r2 (Revision 2), Computer Security Incident Handling
+Guide [SP800-61r2].
+1.2. Document Structure
+The remainder of this document is organized into the following sections and appendices:
+• Section 2 discusses how incident response has evolved to become a critical part of
+cybersecurity risk management, as well as how the concept of the incident response life
+cycle has changed to reflect that.
+• Section 3 presents incident response recommendations and considerations for an
+organization’s cybersecurity risk management practices. They are organized and
+documented as a CSF 2.0 Community Profile.
+• The References section lists references cited throughout this publication.
+• Appendix A and Appendix B provide an acronyms list and a glossary, respectively.
+• Appendix C contains a change log of the major changes made since the previous
+revision.
+3
+NIST SP 800-61r3 Incident Response Recommendations and
+April 2025 Considerations for Cyber Risk Management
+2. Incident Response as Part of Cybersecurity Risk Management
+This section explains the fundamental concepts of incident response as an integral part of
+cybersecurity risk management. Section 2.1 explores the incident response life cycle and
+proposes a new life cycle model based on CSF 2.0 Functions. Section 2.2 discusses incident
+response roles and responsibilities both inside and outside an organization. Finally, Section 2.3
+briefly examines incident response policies, processes, and procedures.
+2.1. Incident Response Life Cycle Model
+Fig. 1 depicts the incident response life cycle model illustrated in the previous version of this
+publication [SP800-61r2].
+Fig. 1. Previous incident response life cycle model
+At that time, incidents were relatively rare, the scope of most incidents was narrow and well-
+defined, and incident response and recovery was usually completed within a day or two. Under
+those conditions, it was realistic to treat incident response as a separate set of activities
+performed by a separate team of personnel and to depict all incident response activities as part
+of a circular life cycle. Formal post-incident activities would identify needed improvements and
+feed them into the preparation stage, thus starting the cycle again. Incident response activities
+were typically intermittent rather than continuous.
+However, the current state of incident response has greatly changed since then. Today,
+incidents occur frequently and cause far more damage. Recovering from them often takes
+weeks or months due to their breadth, complexity, and dynamic nature. Incident response is
+now considered a critical part of cybersecurity risk management that should be integrated
+across organizational operations. The lessons learned during incident response should often be
+shared as soon as they are identified, not delayed until after recovery concludes. Continuous
+improvement is increasingly necessary for all facets of cybersecurity risk management in order
+to keep up with modern threats.
+4
+NIST SP 800-61r3 Incident Response Recommendations and
+April 2025 Considerations for Cyber Risk Management
+Fig. 2 shows a high-level incident response life cycle model based on the six CSF 2.0 Functions,
+which organize cybersecurity outcomes at their highest level:
+• Govern (GV): The organization’s cybersecurity risk management strategy, expectations,
+and policy are established, communicated, and monitored.
+• Identify (ID): The organization’s current cybersecurity risks are understood.
+• Protect (PR): Safeguards to manage the organization’s cybersecurity risks are used.
+• Detect (DE): Possible cybersecurity attacks and compromises are found and analyzed.
+• Respond (RS): Actions regarding a detected cybersecurity incident are taken.
+• Recover (RC): Assets and operations affected by a cybersecurity incident are restored.
+All six Functions have vital roles in incident response. Govern, Identify, and Protect help
+organizations prevent some incidents, prepare to handle incidents that do occur, reduce the
+impact of those incidents, and improve incident response and cybersecurity risk management
+practices based on lessons learned. Detect, Respond, and Recover help organizations discover,
+manage, prioritize, contain, eradicate, and recover from cybersecurity incidents, as well as
+perform incident reporting, notification, and other incident-related communications.
+Fig. 2. Incident response life cycle model based on CSF 2.0 Functions
+The bottom level reflects that the preparation activities of Govern, Identify, and Protect are not
+part of the incident response itself. Rather, they are much broader cybersecurity risk
+management activities that also support incident response. Incident response is shown in the
+top level of the figure: Detect, Respond, and Recover. Additionally, the need for continuous
+improvement is indicated as the middle level with the Improvement Category (ID.IM) within the
+Identify Function and the dashed green lines. Lessons learned from performing all activities in
+all Functions are fed into Improvement, and those lessons are analyzed, prioritized, and used to
+inform all of the Functions. This reflects that organizations can learn new lessons at all times
+5
+NIST SP 800-61r3 Incident Response Recommendations and
+April 2025 Considerations for Cyber Risk Management
+(e.g., detecting the presence of a new threat and characterizing its behavior) and communicate
+those lessons to the appropriate personnel so that the organization’s incident response and
+other cybersecurity risk management policies, processes, and practices can be adjusted as
+needed.
+Table 1 maps the previous SP 800-61 incident response life cycle model’s phases to the
+corresponding CSF 2.0 Functions used in this document.
+Table 1. Previous incident response life cycle model’s phases and corresponding CSF 2.0 Functions
+Previous Incident Response Life Cycle Model Phase CSF 2.0 Functions
+Govern
+Preparation Identify (all Categories)
+Protect
+Detect
+Detection & Analysis
+Identify (Improvement Category)
+Respond
+Containment, Eradication & Recovery Recover
+Identify (Improvement Category)
+Post-Incident Activity Identify (Improvement Category)
+Organizations should use the incident response life cycle framework or model that suits them
+best. The model in this document is based on CSF 2.0 to take advantage of the wealth of
+resources available for CSF 2.0 and aid organizations that are already using the CSF. The
+appropriate incident response life cycle framework or model for an organization depends on
+many factors; for example, larger and more technology-dependent organizations are likely to
+benefit more from using a framework or model emphasizing continuous improvement than
+other organizations would. Regardless of the incident response life cycle framework or model
+used, every organization should take incident response into consideration throughout their
+cybersecurity risk management activities.
+2.2. Incident Response Roles and Responsibilities
+In the past, incident response activities were performed almost exclusively by incident handlers
+from the organization’s own incident response team. Today, while incident handlers are still
+critically important, most organizations increasingly recognize that the success of their incident
+response efforts depend on the participation of many internal and external parties who hold a
+wide variety of roles and responsibilities and may be spread around the world. Roles and
+responsibilities will differ for each organization and may also differ within an organization based
+on the nature of a particular incident.
+6
+NIST SP 800-61r3 Incident Response Recommendations and
+April 2025 Considerations for Cyber Risk Management
+Examples of incident response roles and responsibilities include the following:
+• Leadership. The organization’s leadership team oversees incident response, allocates
+funding, and may have decision-making authority on high-impact response actions, such
+as shutting down or rebuilding critical services.
+• Incident handlers. Incident handlers verify that an incident has occurred, collect and
+analyze data and evidence, prioritize incident response activities, and act appropriately
+to limit damage, find root causes, and restore operations. Incident handlers also often
+provide input to others on mitigating cybersecurity issues and improving resiliency. An
+organization’s incident handlers might be:
+On staff (e.g., an incident response team),
+o
+On contract (e.g., outsourcing a security operations center [SOC] to a managed
+o
+security services provider [MSSP] or leveraging a cloud service provider’s
+incident response team when an incident occurs within that provider’s cloud),
+and/or
+Available when needed (e.g., from a parent organization, a cybersecurity services
+o
+provider, a business partner, or a law enforcement agency).
+Many organizations may use more than one of these approaches, such as internally
+performing basic incident response and engaging third-party resources for assistance
+with certain incidents. Larger organizations may have multiple incident response teams,
+with each team responsible for a particular logical or physical segment of the
+organization. When this model is employed, the teams should be part of a single
+coordinated entity (e.g., a federation) to ensure that incident response processes,
+procedures, and training are consistent across the organization and that information is
+shared among teams.
+• Technology professionals. Cybersecurity, privacy, system, network, cloud, and other
+technology architects, engineers, and administrators, as well as software developers,
+may be involved in incident response and recovery efforts.
+• Legal. Legal experts can review incident response plans, policies, and procedures to
+ensure compliance with applicable laws and regulations, including the right to privacy.
+Legal experts can also review contracts with technology suppliers and other third parties
+when there are incident response implications. In addition, incident responders can seek
+guidance from their organization’s legal department if a particular incident may have
+legal ramifications, such as the prosecution of a suspect, lawsuits, or situations that
+require a memorandum of understanding (MOU) or other binding agreement.
+• Public affairs and media relations. Depending on the nature and impact of an incident,
+it may be necessary to inform the media and, by extension, the public. Sometimes, the
+media learns of incidents through alternate sources (i.e., not through public affairs
+personnel). Having a media engagement strategy in place can greatly aid in this
+situation.
+7
+NIST SP 800-61r3 Incident Response Recommendations and
+April 2025 Considerations for Cyber Risk Management
+• Human resources. Certain human resources practices should consider cybersecurity risk
+management, including pre-employment screening and employee onboarding,
+offboarding, and position changes. Human resources may also be involved if an
+employee is suspected of intentionally causing an incident.
+• Physical security and facilities management. Some computer security incidents occur
+through physical security breaches or involve coordinated logical and physical attacks.
+The incident response team may also need access to facilities during incident handling
+(e.g., to access a compromised workstation in a locked office).
+• Asset owners. Asset owners (e.g., system owners, data owners, and business process
+owners) may have valuable insights on response and recovery priorities for their
+affected assets. They also need to be kept up to date on the status of response and
+recovery efforts.
+Third parties may be under contract with an organization to help perform incident response
+activities. Some third parties may fill a primary role (e.g., an MSSP performing incident
+detection, response, and recovery activities), while other parties (e.g., cloud service providers
+[CSPs] and internet service providers [ISPs]) may be involved in certain incident response
+activities for particular types of incidents. This is a shared responsibility model in which the
+organization transfers some of its responsibilities to a provider. These responsibilities should be
+clearly defined in a contract, and the incident response team should be aware of the division of
+responsibilities, including information flows, coordination, and authority to act on behalf of the
+organization. This also includes restrictions on what the service provider can do, such as sharing
+sanitized incident information with other customers or making and implementing operational
+decisions (e.g., immediately deactivating certain services to contain an incident).
+A service provider may detect malicious activity sooner than individual organizations would
+because it can correlate events across its customers. In some situations, a service provider
+might be able to use knowledge of an incident with one customer to proactively prevent similar
+incidents with its other customers. Service providers often have privileged access to
+organizational systems and may also have access to sensitive organizational data. Accordingly,
+the risk of malicious insiders or the service provider being compromised should be considered
+and addressed. Non-disclosure agreements (NDAs) and contracting clauses are options for
+deterring the unauthorized disclosure of sensitive data.
+2.3. Incident Response Policies, Processes, and Procedures
+Organizations should have policies that govern their cybersecurity incident response. While a
+policy is highly individualized to the organization, most incident response policies include the
+same key elements:
+• Statement of management commitment
+• Purpose and objectives of the policy
+• Scope of the policy (i.e., to whom and what it applies and under what circumstances)
+8
+NIST SP 800-61r3 Incident Response Recommendations and
+April 2025 Considerations for Cyber Risk Management
+• Definition of events, cybersecurity incidents, investigations, and related terms
+• Roles, responsibilities, and authorities, such as which roles have the authority to
+confiscate, disconnect, or shut down technology assets
+• Guidelines for prioritizing incidents, estimating their severity, initiating recovery
+processes, maintaining or restoring operations, and other key actions
+• Performance measures
+Processes and procedures should be based on the incident response policy and plan.
+Documented procedures should explain how technical processes and other operating
+procedures should be performed. Procedures can be tested or exercised periodically to verify
+their accuracy and can be used to help train new personnel. While it is impossible to have
+detailed procedures for every possible situation, organizations should consider documenting
+procedures for responding to the most common types of incidents and threats. Organizations
+should also develop and maintain procedures for particularly important processes that may be
+urgently needed during emergency situations, such as redeploying the organization’s primary
+authentication platform.
+Many organizations choose to create playbooks as part of documenting their procedures.
+Playbooks provide actionable steps or tasks for people to perform during various scenarios or
+situations. Formatting procedures within a playbook instead of another format can improve
+their usability. See the Cybersecurity and Infrastructure Security Agency (CISA) Cybersecurity
+Incident & Vulnerability Response Playbooks [CISA-PB] for incident response playbook
+examples.
+9

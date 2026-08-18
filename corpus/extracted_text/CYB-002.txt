@@ -1,359 +1,273 @@
 Cyber Incident Response Plan
-
-          Appendix                   A
-
-          Terminology        and   Definitions
-
-          Use of consistent and pre-defined terminology to describe incidents and their effects can be helpful
-          during a response. In your CIRP, include commonly used terms used in your organisation. ACSC defines
-          cyber threats, events, alerts and incidents as follows:
-
-          Cyber threat
-          A cyber threat is any circumstance or event with the potential to harm systems or information.
-          Other threats are listed on cyber.gov.au. Organisations can include a list of cyber threats of concern.
-          The ACSC Annual Cyber Threat Report (2021) outlines the following threat environment and key cyber
-          security trends:
-          • COVID-19 themed malicious activity • Ransomware
-          including phishing emails and scams • S oftware supply chain compromise
-
-          • Exploitation of security vulnerabilities • C ybercrime
-          • Business Email Compromise
-          Cyber security event
-
-          A cyber security event is an occurrence of a system, service or network state indicating a possible
-          breach of security policy, failure of safeguards or a previously unknown situation that may be
-          relevant to security.
-          A cyber security event has the potential to become, but is not confirmed to be, a cyber incident.
-
-          Examples of cyber security events include (but are not limited to):
-          • A user has disabled the antivirus on their computer
-          • A user has deleted or modified system files
-          • A user restarted a server
-
-          • Unauthorised access to a server or system.
-          Cyber security alert
-
-          A cyber security alert is a notification generated in response to a deviation from normal behaviour.
-          Cyber security alerts are used to highlight cyber security events.
-          Cyber incident
-
-          A cyber incident is an unwanted or unexpected cyber security event, or a series of such events,
-          that have a significant probability of compromising business operations. A cyber incident requires
-          corrective action.
-          Examples of cyber security incidents include (but are not limited to):
-          • Denial-of-service attacks (DoS)
-          • Unauthorised access or attempts to access a system
-
-          • Compromise of sensitive information
-          • Virus or malware outbreak (including ransomware).
-
-                                                       Cyber Incident Response Plan | Guidance 31
-
-          Cyber Incident Response Plan
-
-          Appendix                   B
-
-          Cyber    Incident     Response
-          Readiness      Checklist
-
-          This checklist is to aid your organisation’s initial assessment of its readiness to respond to a cyber
-          security incident. This checklist is not an exhaustive list of all readiness activities.
-
-           PREPARATION
-
-                Your organisation has a cyber security policy or strategy that outlines your organisation’s approach
-                to prevention, preparedness, detection, response, recovery, review and improvement.
-                • For example, does your organisation have a position on paying ransom, reporting incidents to
-                government, publicly acknowledging cyber incidents, sharing information about incidents with
-                trusted industry and government partners?
-                A Cyber Incident Response Plan has been developed, which:
-                • Aligns with your organisation’s operating environment and other processes, including emergency
-                management and business continuity processes.
-                • Has been reviewed or tested in an exercise to ensure it remains current and responsible personnel
-                are aware of their roles, responsibilities and processes.
-                • Has prepared templates for information gathering, situation reports and other relevant events.
-
-                Staff involved in managing an incident have received incident response training.
-
-                Up-to-date hard copy versions of the Cyber Incident Response Plan and playbooks are stored
-                in a secure location (in case of electronic or hardware failure) and are accessible to authorised
-                staff members.
-
-                Specific playbooks to supplement the Cyber Incident Response Plan have been developed that
-                provide clear guidance for response actions to common incidents, roles and responsibilities.
-
-                A Cyber Incident Response Team (CIRT) and a Senior Executive Management Team (SEMT)
-                – or equivalents – have been formed to manage the response, with approved authorities.
-                All relevant IT and OT Standard Operating Procedures (SOPs) are documented and have
-                been reviewed or tested in an exercise to ensure they remain current and responsible personnel
-                are aware of their roles, responsibilities and processes.
-
-     32 Cyber Incident Response Plan | Guidance
-
-          Cyber Incident Response Plan
-
-          Cyber    Incident     Response
-
-          Readiness      Checklist
-
-                Arrangements for service providers, including cloud and software as a service, to provide and retain
-                logs have been established and tested to ensure these include useful data and can be provided in a
-                timely manner.
-                Log retention for critical systems have been configured adequately and tested to confirm that
-                they capture useful data. Refer to the ACSC publications including Windows Event Logging and
-                Forwarding for specific guidance.
-
-                Your organisation has internal or third party arrangements and capabilities to detect
-                and analyse incidents. If these capabilities are outsourced, your organisation has an active
-                service agreement/contract.
-
-                Critical assets (data, applications and systems) have been identified and documented.
-
-                Standard Operating Procedures (SOPs) have been developed, and roles and responsibilities
-                assigned for use of facilities and communications technologies in response to cyber incidents,
-                and these resources are confirmed as available. This includes alternative/back-up ICT-based
-                channels.
-                Incident logging/records and tracking technologies used to manage a response are confirmed
-                as available and have been tested.
-
-                Role cards have been developed for each person involved in the CIRT and the SEMT.
-                Individual actions will depend on the type and severity of the incident. Example role card
-                is available at Appendix J.
-
-                Your organisation has internal or third party arrangements and capabilities to monitor threats.
-                Situational awareness information is collected from internal and external data sources, including:
-                • Local system and network traffic and activity logs
-                • News feeds concerning ongoing political, social, or economic activities that might
-                impact incident activity
-                • External feeds on incident trends, new attack vectors, current attack indicators and new mitigation
-                strategies and technologies.
-
-                                                       Cyber Incident Response Plan | Guidance 33
-
-          Cyber Incident Response Plan
-
-          Cyber    Incident     Response
-
-          Readiness      Checklist
-
-           DETECTION, INVESTIGATION, ANALYSIS AND ACTIVATION
-
-           Standard Operating Procedures (SOPs) have been developed, and roles and responsibilities assigned for:
-
-                Detection mechanisms typically include scanning, sensing and logging mechanisms which can be
-                used to identify potential cyber security events and incidents. Monitoring processes could include
-                the identification of unusual patterns of behaviour and logging that facilitates investigation and
-                preserves forensic evidence. Monitoring processes would consider the broad set of events, ranging
-                from the physical hardware layer to higher order business activities such as payments and changes
-                to user access. Common monitoring techniques include:
-                • Network and user profiling that establishes a baseline of normal activity which, when combined
-                with logging and alerting mechanisms, can enable detection of anomalous activity;
-                • Scanning for unauthorised hardware, software and changes to configurations;
-                • Sensors that provide an alert when a measure breaches a defined threshold(s) (e.g. device,
-                server and network activity);
-                • Logging and alerting of access to sensitive data or unsuccessful logon attempts to identify
-                potential unauthorised access; and
-                • Users with privileged access accounts subject to a greater level of monitoring in light of the
-                heightened risks involved.
-                Incident detection, including self-detected incidents, notifications received from service providers
-                or vendors, and notifications received from trusted third parties (e.g. ACSC).
-
-                Incident analysis, including how incidents are to be categorised, classified and prioritised, and
-                controls related to how data is stored and transmitted (i.e. if out-of-band transmission is required).
-                Activating a Cyber Incident Response Team (CIRT) to manage critical incidents, with roles and
-                responsibilities assigned.
-
-                Activating a Senior Executive Management Team (SEMT) to manage critical incidents,
-                with roles and responsibilities assigned.
-
-           CONTAINMENT, EVIDENCE COLLECTION AND REMEDIATION
-
-                Standard Operating Procedures (SOPs), playbooks and templates, have been developed, and roles
-                and responsibilities assigned for containment, evidence collection and remediation. These can be
-                included as appendices to the Cyber Incident Response Plan.
-
-                A secure location is available for storing data captured during an incident, which could be used
-                as evidence of the incident and the adversary’s tradecraft, and ready to be provided to third-party
-                stakeholders if needed.
-
-          4 APRA Prudential Practice Guide CPG 234 Information Security.
-
-     34 Cyber Incident Response Plan | Guidance
-
-          Cyber Incident Response Plan
-
-          Cyber    Incident     Response
-
-          Readiness      Checklist
-
-           COMMUNICATIONS
-
-                Policy, plans, Standard Operating Procedures (SOPs) and templates have been developed to support
-                communicating with:
-                – Internal stakeholders (e.g. Board, staff)
-                – External stakeholders (e.g. stakeholders to assist with the response and stakeholders
-                 with an interest in the response).
-
-                Policy, plans, Standard Operating Procedures (SOPs) and templates for media and communications
-                professionals have been developed, and roles and responsibilities assigned, to support public and
-                media messaging.
-                You organisation has assigned a public and media spokesperson, who is supported by subject
-                matter experts.
-
-                Staff have been trained to implement the communications processes and execute their roles
-                and responsibilities.
-
-                Staff who are not involved in managing incidents are cognisant of your organisation’s policy and
-                processes and their responsibilities when an incident occurs (e.g. exercising discretion, using
-                approved talking points, referring enquiries to the designated officer).
-           INCIDENT NOTIFICATION AND REPORTING
-
-                Processes, roles,responsibilities and contact details are assigned and documented to support the
-                organisation to meet its legal and regulatory requirements on cyber incident notification, reporting
-                and response. This includes the processes for obtaining authority to release and share information.
-                Processes are documented for insurance requirements.
-
-           POST INCIDENT REVIEW
-
-                A process is documented to conduct Post Incident Reviews (PIR) following conclusion of an incident
-                and PIR reports with recommendations are submitted to management for endorsement.
-                A process is documented to ensure actions following incidents and/or exercises are tracked and
-                completed (e.g. Action Register).
-
-                                                       Cyber Incident Response Plan | Guidance 35
-
-          Cyber Incident Response Plan
-
-          Appendix                   H
-
-          Post   Incident    Review     Guide
-          and   Analysis     Template
-
-          A Post Incident Review (PIR) is a detailed review conducted after an organisation has experienced a
-          cyber security incident. The content of the review will vary for each organisation, but primarily focuses
-          on establishing learnings and providing recommended actions to mitigate future incidents. The
-          purpose of this document is to provide organisations that have experienced a cyber security incident
-          with tools and techniques to conduct a PIR in order to identify areas to improve their cyber security
-          posture.
-
-          How to use the guide
-          The guide contains high level steps recommended for organisations to follow after experiencing a
-          cyber security incident. The guide should be used as a resource, and will need to be further tailored by
-          organisations to suit and meet their individual requirements. The templates are generic documents,
-          and will need to be tailored to suit specific organisational requirements.
-          This guide and the templates were informed by private industry and government resources.
-
-          Post Incident Review Steps
-
-          Step 1 – Hold incident debriefs
-          Post incident debriefs are useful for capturing observations from personnel directly involved in
-          managing a cyber security incident and identifying actions to improve how the organisation managed
-          the response, as well as how the incident could have been prevented.
-          There are two types of debriefs organisations may hold after experiencing a cyber security incident:
-          a hot debrief and a formal debrief (or cold debrief).
-
-          A hot debrief is held immediately after an organisation has recovered its networks and systems from
-          a cyber security incident
-          The benefits of holding a hot debrief include:
-          • The team involved in responding to the incident is available to provide instant feedback and lessons
-          learned.
-
-          • Any urgent issues identified during the incident can be addressed immediately.
-          • Personnel involved in the incident are more likely to recall information and detail as it is still fresh
-          in their minds.
-
-                                                       Cyber Incident Response Plan | Guidance 41
-
-          Cyber Incident Response Plan
-
-          A formal debrief is held days to weeks after an organisation has recovered its networks and systems
-          after a cyber security incident.
-          The benefits of holding a formal debrief include:
-          • It provides an opportunity for an organisation to discuss the cyber security incident in detail after it
-          is resolved to gather key insights, learnings and opportunities for improvement.
-
-          • It enables time between the incident and debrief, providing time for emotions to settle, particularly
-          for stressful incidents.
-          • It ensures all key personnel required for the discussion are present, especially senior management
-          who will need to drive the implementation of actions.
-          The material below provides high-level guidance on how organisations can hold both types of debrief.
-
-          Hot debrief guidance
-          Time:
-
-          30 minutes – 1 hour*
-          *Timing may depend on the complexity of the incident and the personnel involved.
-          Aim:
-
-          The aim of the hot debrief is to review the incident, receive feedback on personnel observations and
-          insights, and identify any urgent issues requiring immediate action.
-          Participants:
-          The debrief should be led by a manager who was involved during the incident, supported by a scribe
-          whose role is to document attendance, key insights and immediate actions. It is recommended that
-          debrief participants include all personnel involved during the detection, response and recovery
-          phases of the incident, and upper management are excluded (i.e. CEOs and general managers).
-          This will ensure personnel involved in the incident can speak openly without fear of repercussion.
-          Content:
-
-          The manager could guide discussion using the following questions:
-          1. What went well?
-          2. What could personnel and teams do differently next time to improve?
-
-          3. What action has been taken to remediate immediate risk? Are there any further issues that require
-            immediate resolution?
-          Note, it is essential for the manager to remain objective during the discussion, and treat the incident
-          as a learning point for all involved, without attributing blame to an individual or a team.
-          Conclusion:
-
-          At the end of the debrief, the manager should provide a summary of the discussions to participants
-          who can confirm whether the key issues and actions were captured. The manager should explain
-          the next steps, following the debrief, and the expected timeframes for these.
-
-     42 Cyber Incident Response Plan | Guidance
-
-          Cyber Incident Response Plan
-
-          Formal debrief guidance
-          Time:
-
-          1–2 hours.
-          Aim:
-          The aim of the formal debrief is to review the incident, validate what worked and produce actions
-          and assigned responsibilities to improve the current arrangements.
-
-          Participants:
-          The debrief should be led by a facilitator who asks key questions, supported by a scribe to document
-          key insights and actions.
-          It is recommended that debrief participants include:
-
-          • technical personnel who were involved in detecting, responding to, and resolving the incident
-          • non-technical personnel who were involved during the incident (at minimum – one staff member
-          from each function)
-          • communications/media personnel involved in the incident.
-
-          Content:
-          Questions to consider in the debrief can be found at the Post Incident Review Analysis Template.
-          The facilitator can use this document to lead the conversation with the participants, while the scribe
-          documents the discussion directly into the Analysis template. The scribe can also use the Action
-          Register Template to document any actions resulting from the discussion.
-          Conclusion:
-          At the end of the debrief, a decision should be made about whether additional discussions are required,
-          or if finalisation of the incident documents can be completed. If email correspondence is selected
-          to disseminate the documents, an action officer will need to be identified for completing them and
-          circulating them to staff for endorsement.
-
-          Step 2 – Complete incident documentation
-          Based on the findings of the debriefs, the action officer should complete a draft of the Post Incident
-          Review Analysis and the Action Register, and circulate them to the personnel involved in the hot debrief
-          for their feedback and endorsement. Note, it is important that the Action Register details an assigned
-          lead (action officer) for closing out each action.
-          Once feedback is received and incorporated, the documents should be sent to an executive staff
-          member (a CEO or general manager, or equivalent) for endorsement. The executive staff member may
-          advise on their expectations on the frequency of progress reporting of agreed actions, and nominate
-          a staff member to lead the reporting/tracking.
-
-          Step 3 – Incident tracking and reporting
-          The identified actions should be tracked and reported at agreed frequencies by the nominated
-          staff member.
-
-                                                       Cyber Incident Response Plan | Guidance 43
+Appendix A
+Terminology and Definitions
+Cyber threat
+Cyber security event
+Cyber security alert
+Cyber incident
+Use of consistent and pre-defined terminology to describe incidents and their effects can be helpful
+during a response. In your CIRP, include commonly used terms used in your organisation. ACSC defines
+cyber threats, events, alerts and incidents as follows:
+A cyber threat is any circumstance or event with the potential to harm systems or information.
+Other threats are listed on cyber.gov.au. Organisations can include a list of cyber threats of concern.
+The ACSC Annual Cyber Threat Report (2021) outlines the following threat environment and key cyber
+security trends:
+• COVID-19 themed malicious activity • Ransomware
+including phishing emails and scams • Software supply chain compromise
+• Exploitation of security vulnerabilities • Cybercrime
+• Business Email Compromise
+A cyber security event is an occurrence of a system, service or network state indicating a possible
+breach of security policy, failure of safeguards or a previously unknown situation that may be
+relevant to security.
+A cyber security event has the potential to become, but is not confirmed to be, a cyber incident.
+Examples of cyber security events include (but are not limited to):
+• A user has disabled the antivirus on their computer
+• A user has deleted or modified system files
+• A user restarted a server
+• Unauthorised access to a server or system.
+A cyber security alert is a notification generated in response to a deviation from normal behaviour.
+Cyber security alerts are used to highlight cyber security events.
+A cyber incident is an unwanted or unexpected cyber security event, or a series of such events,
+that have a significant probability of compromising business operations. A cyber incident requires
+corrective action.
+Examples of cyber security incidents include (but are not limited to):
+• Denial-of-service attacks (DoS)
+• Unauthorised access or attempts to access a system
+• Compromise of sensitive information
+• Virus or malware outbreak (including ransomware).
+Cyber Incident Response Plan | Guidance
+31
+Cyber Incident Response Plan
+Appendix B
+Cyber Incident Response
+Readiness Checklist
+This checklist is to aid your organisation’s initial assessment of its readiness to respond to a cyber
+security incident. This checklist is not an exhaustive list of all readiness activities.
+PREPARATION
+Your organisation has a cyber security policy or strategy that outlines your organisation’s approach
+to prevention, preparedness, detection, response, recovery, review and improvement.
+• For example, does your organisation have a position on paying ransom, reporting incidents to
+government, publicly acknowledging cyber incidents, sharing information about incidents with
+trusted industry and government partners?
+A Cyber Incident Response Plan has been developed, which:
+• Aligns with your organisation’s operating environment and other processes, including emergency
+management and business continuity processes.
+• Has been reviewed or tested in an exercise to ensure it remains current and responsible personnel
+are aware of their roles, responsibilities and processes.
+• Has prepared templates for information gathering, situation reports and other relevant events.
+Staff involved in managing an incident have received incident response training.
+Up-to-date hard copy versions of the Cyber Incident Response Plan and playbooks are stored
+in a secure location (in case of electronic or hardware failure) and are accessible to authorised
+staff members.
+Specific playbooks to supplement the Cyber Incident Response Plan have been developed that
+provide clear guidance for response actions to common incidents, roles and responsibilities.
+A Cyber Incident Response Team (CIRT) and a Senior Executive Management Team (SEMT)
+– or equivalents – have been formed to manage the response, with approved authorities.
+All relevant IT and OT Standard Operating Procedures (SOPs) are documented and have
+been reviewed or tested in an exercise to ensure they remain current and responsible personnel
+are aware of their roles, responsibilities and processes.
+32 Cyber Incident Response Plan | Guidance
+Cyber Incident Response Plan
+Cyber Incident Response
+Readiness Checklist
+Arrangements for service providers, including cloud and software as a service, to provide and retain
+logs have been established and tested to ensure these include useful data and can be provided in a
+timely manner.
+Log retention for critical systems have been configured adequately and tested to confirm that
+they capture useful data. Refer to the ACSC publications including Windows Event Logging and
+Forwarding for specific guidance.
+Your organisation has internal or third party arrangements and capabilities to detect
+and analyse incidents. If these capabilities are outsourced, your organisation has an active
+service agreement/contract.
+Critical assets (data, applications and systems) have been identified and documented.
+Standard Operating Procedures (SOPs) have been developed, and roles and responsibilities
+assigned for use of facilities and communications technologies in response to cyber incidents,
+and these resources are confirmed as available. This includes alternative/back-up ICT-based
+channels.
+Incident logging/records and tracking technologies used to manage a response are confirmed
+as available and have been tested.
+Role cards have been developed for each person involved in the CIRT and the SEMT.
+Individual actions will depend on the type and severity of the incident. Example role card
+is available at Appendix J.
+Your organisation has internal or third party arrangements and capabilities to monitor threats.
+Situational awareness information is collected from internal and external data sources, including:
+• Local system and network traffic and activity logs
+• News feeds concerning ongoing political, social, or economic activities that might
+impact incident activity
+• External feeds on incident trends, new attack vectors, current attack indicators and new mitigation
+strategies and technologies.
+Cyber Incident Response Plan | Guidance 33
+Cyber Incident Response Plan
+Cyber Incident Response
+Readiness Checklist
+DETECTION, INVESTIGATION, ANALYSIS AND ACTIVATION
+Standard Operating Procedures (SOPs) have been developed, and roles and responsibilities assigned for:
+Detection mechanisms typically include scanning, sensing and logging mechanisms which can be
+used to identify potential cyber security events and incidents. Monitoring processes could include
+the identification of unusual patterns of behaviour and logging that facilitates investigation and
+preserves forensic evidence. Monitoring processes would consider the broad set of events, ranging
+from the physical hardware layer to higher order business activities such as payments and changes
+to user access. Common monitoring techniques include:
+• Network and user profiling that establishes a baseline of normal activity which, when combined
+with logging and alerting mechanisms, can enable detection of anomalous activity;
+• Scanning for unauthorised hardware, software and changes to configurations;
+• Sensors that provide an alert when a measure breaches a defined threshold(s) (e.g. device,
+server and network activity);
+• Logging and alerting of access to sensitive data or unsuccessful logon attempts to identify
+potential unauthorised access; and
+• Users with privileged access accounts subject to a greater level of monitoring in light of the
+heightened risks involved.
+Incident detection, including self-detected incidents, notifications received from service providers
+or vendors, and notifications received from trusted third parties (e.g. ACSC).
+Incident analysis, including how incidents are to be categorised, classified and prioritised, and
+controls related to how data is stored and transmitted (i.e. if out-of-band transmission is required).
+Activating a Cyber Incident Response Team (CIRT) to manage critical incidents, with roles and
+responsibilities assigned.
+Activating a Senior Executive Management Team (SEMT) to manage critical incidents,
+with roles and responsibilities assigned.
+CONTAINMENT, EVIDENCE COLLECTION AND REMEDIATION
+Standard Operating Procedures (SOPs), playbooks and templates, have been developed, and roles
+and responsibilities assigned for containment, evidence collection and remediation. These can be
+included as appendices to the Cyber Incident Response Plan.
+A secure location is available for storing data captured during an incident, which could be used
+as evidence of the incident and the adversary’s tradecraft, and ready to be provided to third-party
+stakeholders if needed.
+4 APRA Prudential Practice Guide CPG 234 Information Security.
+34 Cyber Incident Response Plan | Guidance
+Cyber Incident Response Plan
+Cyber Incident Response
+Readiness Checklist
+COMMUNICATIONS
+Policy, plans, Standard Operating Procedures (SOPs) and templates have been developed to support
+communicating with:
+– Internal stakeholders (e.g. Board, staff)
+– External stakeholders (e.g. stakeholders to assist with the response and stakeholders
+with an interest in the response).
+Policy, plans, Standard Operating Procedures (SOPs) and templates for media and communications
+professionals have been developed, and roles and responsibilities assigned, to support public and
+media messaging.
+You organisation has assigned a public and media spokesperson, who is supported by subject
+matter experts.
+Staff have been trained to implement the communications processes and execute their roles
+and responsibilities.
+Staff who are not involved in managing incidents are cognisant of your organisation’s policy and
+processes and their responsibilities when an incident occurs (e.g. exercising discretion, using
+approved talking points, referring enquiries to the designated officer).
+INCIDENT NOTIFICATION AND REPORTING
+Processes, roles,responsibilities and contact details are assigned and documented to support the
+organisation to meet its legal and regulatory requirements on cyber incident notification, reporting
+and response. This includes the processes for obtaining authority to release and share information.
+Processes are documented for insurance requirements.
+POST INCIDENT REVIEW
+A process is documented to conduct Post Incident Reviews (PIR) following conclusion of an incident
+and PIR reports with recommendations are submitted to management for endorsement.
+A process is documented to ensure actions following incidents and/or exercises are tracked and
+completed (e.g. Action Register).
+Cyber Incident Response Plan | Guidance 35
+Cyber Incident Response Plan
+Appendix H
+Post Incident Review Guide
+and Analysis Template
+A Post Incident Review (PIR) is a detailed review conducted after an organisation has experienced a
+cyber security incident. The content of the review will vary for each organisation, but primarily focuses
+on establishing learnings and providing recommended actions to mitigate future incidents. The
+purpose of this document is to provide organisations that have experienced a cyber security incident
+with tools and techniques to conduct a PIR in order to identify areas to improve their cyber security
+posture.
+How to use the guide
+The guide contains high level steps recommended for organisations to follow after experiencing a
+cyber security incident. The guide should be used as a resource, and will need to be further tailored by
+organisations to suit and meet their individual requirements. The templates are generic documents,
+and will need to be tailored to suit specific organisational requirements.
+This guide and the templates were informed by private industry and government resources.
+Post Incident Review Steps
+Step 1 – Hold incident debriefs
+Post incident debriefs are useful for capturing observations from personnel directly involved in
+managing a cyber security incident and identifying actions to improve how the organisation managed
+the response, as well as how the incident could have been prevented.
+There are two types of debriefs organisations may hold after experiencing a cyber security incident:
+a hot debrief and a formal debrief (or cold debrief).
+A hot debrief is held immediately after an organisation has recovered its networks and systems from
+a cyber security incident
+The benefits of holding a hot debrief include:
+• The team involved in responding to the incident is available to provide instant feedback and lessons
+learned.
+• Any urgent issues identified during the incident can be addressed immediately.
+• Personnel involved in the incident are more likely to recall information and detail as it is still fresh
+in their minds.
+Cyber Incident Response Plan | Guidance 41
+Cyber Incident Response Plan
+A formal debrief is held days to weeks after an organisation has recovered its networks and systems
+after a cyber security incident.
+The benefits of holding a formal debrief include:
+• It provides an opportunity for an organisation to discuss the cyber security incident in detail after it
+is resolved to gather key insights, learnings and opportunities for improvement.
+• It enables time between the incident and debrief, providing time for emotions to settle, particularly
+for stressful incidents.
+• It ensures all key personnel required for the discussion are present, especially senior management
+who will need to drive the implementation of actions.
+The material below provides high-level guidance on how organisations can hold both types of debrief.
+Hot debrief guidance
+Time:
+30 minutes – 1 hour*
+*Timing may depend on the complexity of the incident and the personnel involved.
+Aim:
+The aim of the hot debrief is to review the incident, receive feedback on personnel observations and
+insights, and identify any urgent issues requiring immediate action.
+Participants:
+The debrief should be led by a manager who was involved during the incident, supported by a scribe
+whose role is to document attendance, key insights and immediate actions. It is recommended that
+debrief participants include all personnel involved during the detection, response and recovery
+phases of the incident, and upper management are excluded (i.e. CEOs and general managers).
+This will ensure personnel involved in the incident can speak openly without fear of repercussion.
+Content:
+The manager could guide discussion using the following questions:
+1. What went well?
+2. What could personnel and teams do differently next time to improve?
+3. What action has been taken to remediate immediate risk? Are there any further issues that require
+immediate resolution?
+Note, it is essential for the manager to remain objective during the discussion, and treat the incident
+as a learning point for all involved, without attributing blame to an individual or a team.
+Conclusion:
+At the end of the debrief, the manager should provide a summary of the discussions to participants
+who can confirm whether the key issues and actions were captured. The manager should explain
+the next steps, following the debrief, and the expected timeframes for these.
+42 Cyber Incident Response Plan | Guidance
+Cyber Incident Response Plan
+Formal debrief guidance
+Time:
+1–2 hours.
+Aim:
+The aim of the formal debrief is to review the incident, validate what worked and produce actions
+and assigned responsibilities to improve the current arrangements.
+Participants:
+The debrief should be led by a facilitator who asks key questions, supported by a scribe to document
+key insights and actions.
+It is recommended that debrief participants include:
+• technical personnel who were involved in detecting, responding to, and resolving the incident
+• non-technical personnel who were involved during the incident (at minimum – one staff member
+from each function)
+• communications/media personnel involved in the incident.
+Content:
+Questions to consider in the debrief can be found at the Post Incident Review Analysis Template.
+The facilitator can use this document to lead the conversation with the participants, while the scribe
+documents the discussion directly into the Analysis template. The scribe can also use the Action
+Register Template to document any actions resulting from the discussion.
+Conclusion:
+At the end of the debrief, a decision should be made about whether additional discussions are required,
+or if finalisation of the incident documents can be completed. If email correspondence is selected
+to disseminate the documents, an action officer will need to be identified for completing them and
+circulating them to staff for endorsement.
+Step 2 – Complete incident documentation
+Based on the findings of the debriefs, the action officer should complete a draft of the Post Incident
+Review Analysis and the Action Register, and circulate them to the personnel involved in the hot debrief
+for their feedback and endorsement. Note, it is important that the Action Register details an assigned
+lead (action officer) for closing out each action.
+Once feedback is received and incorporated, the documents should be sent to an executive staff
+member (a CEO or general manager, or equivalent) for endorsement. The executive staff member may
+advise on their expectations on the frequency of progress reporting of agreed actions, and nominate
+a staff member to lead the reporting/tracking.
+Step 3 – Incident tracking and reporting
+The identified actions should be tracked and reported at agreed frequencies by the nominated
+staff member.
+Cyber Incident Response Plan | Guidance 43

@@ -6,20 +6,22 @@
       "type": "pdf",
       "scope": "full",
       "reason": "12-page guide, all prose.",
-      "word_count": 2934,
+      "word_count": 2943,
       "manual_review": false,
       "total_pages": 12,
-      "pages_extracted": 12
+      "pages_extracted": 12,
+      "column_splits": null
     },
     "CYB-002": {
       "source_file": "CYB/CYB-002_ACSC_cyber_incident_response_plan_guidance.pdf",
       "type": "pdf",
       "scope": "pages",
       "reason": "Screening decision 7.2: scope limited to Appendices A, B and H. Page positions were verified by hand in a PDF viewer and then confirmed page by page against the extracted text: 31 is Appendix A (terminology), 32-35 are Appendix B (readiness checklist), 41-43 are the prose part of Appendix H (post-incident review). Pages 36-40 and 44-50 are excluded because they are Appendices C to G and the PIR analysis form - blank templates that cannot serve as evidence. Excluding 38-40 also removes a defect: those pages are landscape tables and pdfplumber returns their text character-reversed ('xidneppA' for 'Appendix'). Marker-based slicing was tried first and abandoned because the word 'Appendix' appears throughout the body as cross-references.",
-      "word_count": 2586,
+      "word_count": 2584,
       "manual_review": false,
       "total_pages": 56,
-      "pages_extracted": 8
+      "pages_extracted": 8,
+      "column_splits": null
     },
     "CYB-003": {
       "source_file": "CYB/CYB-003_ACSC_practitioner_guidance.pdf",
@@ -29,7 +31,8 @@
       "word_count": 2334,
       "manual_review": false,
       "total_pages": 51,
-      "pages_extracted": 8
+      "pages_extracted": 8,
+      "column_splits": null
     },
     "CYB-004": {
       "source_file": "CYB/CYB-004_NIST_SP800-61r3.pdf",
@@ -39,7 +42,8 @@
       "word_count": 3241,
       "manual_review": false,
       "total_pages": 48,
-      "pages_extracted": 9
+      "pages_extracted": 9,
+      "column_splits": null
     },
     "DIS-001": {
       "source_file": "DIS/DIS-001_FEMA_earthquake_info_sheet.pdf",
@@ -49,17 +53,19 @@
       "word_count": 525,
       "manual_review": false,
       "total_pages": 2,
-      "pages_extracted": 2
+      "pages_extracted": 2,
+      "column_splits": null
     },
     "DIS-002": {
       "source_file": "DIS/DIS-002_FEMA_flood_info_sheet.pdf",
       "type": "pdf",
       "scope": "full",
       "reason": "Screening risk 7.1: the PDF carries two overlapping text layers. Extraction output must be inspected and the cover panel cleaned before chunking.",
-      "word_count": 733,
+      "word_count": 734,
       "manual_review": true,
       "total_pages": 2,
-      "pages_extracted": 2
+      "pages_extracted": 2,
+      "column_splits": null
     },
     "DIS-003": {
       "source_file": "DIS/DIS-003_FEMA_tornado_info_sheet.pdf",
@@ -69,7 +75,8 @@
       "word_count": 535,
       "manual_review": false,
       "total_pages": 2,
-      "pages_extracted": 2
+      "pages_extracted": 2,
+      "column_splits": null
     },
     "DIS-004": {
       "source_file": "DIS/DIS-004_NWS_flood_watch_vs_warning.html",
@@ -89,17 +96,21 @@
       "word_count": 837,
       "manual_review": false,
       "total_pages": 2,
-      "pages_extracted": 2
+      "pages_extracted": 2,
+      "column_splits": null
     },
     "INF-002": {
       "source_file": "INF/INF-002_CPSC_portable_generator_hazards.pdf",
       "type": "pdf",
       "scope": "full",
-      "reason": "1-page safety alert, four headed blocks.",
+      "reason": "1-page safety alert, four headed blocks. The page is set in two columns whose gutter is too narrow for automatic detection, so the boundary is given explicitly at x=305; without it the Carbon Monoxide, Electrical and Fire hazard blocks interleave line by line.",
       "word_count": 672,
       "manual_review": false,
       "total_pages": 1,
-      "pages_extracted": 1
+      "pages_extracted": 1,
+      "column_splits": [
+        305
+      ]
     },
     "INF-003": {
       "source_file": "INF/INF-003_USDA_keep_food_safe_emergencies.html",
