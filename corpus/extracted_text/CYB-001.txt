@@ -1,0 +1,417 @@
+Cyber          Security                   Small
+                                              Business
+                                              Guide
+    Response       and   Recovery
+                                              Collection
+
+    How to prepare for a cyber incident, from response
+    through to recovery
+
+     Contents
+
+     3    Introduction
+
+     4    Step 1: Prepare for incidents
+     7    Step 2: Identify what’s happening
+
+     9    Step 3: Resolve the incident
+     10   Step 4: Report the incident
+
+          to wider stakeholders
+     11   Step 5: Learn from the incident
+
+     1 https://www.ncsc.gov.uk/collection/small-business-guide
+     2 https://www.ncsc.gov.uk/collection/10-steps-to-cyber-security/the-10-steps/incident-management
+     3 https://www.ncsc.gov.uk/collection/board-toolkit/planning-your-response-to-cyber-incidents
+     4 https://www.ncsc.gov.uk/news/new-cyber-attack-categorisation-system-improve-uk-response-incidents
+     5 https://report.ncsc.gov.uk/
+
+     2  National Cyber Security Centre
+
+                               What is an incident?
+       Introduction
+                               The NCSC define a cyber incident as
+                               unauthorised access (or attempted
+       It’s natural for all organisations to access) to an organisation’s IT systems.
+       experience bumps in the road. As a These may be breaches (when you’re
+       UK business there is around a 1 in 2 aware of the unauthorised access of
+       chance that you will experience a cyber data or systems) or malicious attacks
+       breach*. When something unexpected (such as denial of service attacks,
+       happens, such as a cyber incident, it malware infection, ransomware or
+       can be difficult to know how to react. phishing attacks), or could simply be
+       Naturally, you will want to resolve the accidental events (such as damage
+       problem as quickly as possible so you from fire/flood/theft).
+       can resume business as normal.
+                               Reporting incidents
+       For these reasons, the NCSC has If you are a business, charity or other
+       created this Small Business Guide to organisation which is currently suffering
+       Response and Recovery. It provides a live cyber attack (in progress), call
+       small to medium sized organisations 0300 123 2040 immediately. This service is
+       with guidance about how to prepare available 24 hours a day, 7 days a week.
+       their response, and plan their recovery Your call will be dealt with as a priority
+       to a cyber incident. It’s a companion and your live incident will be triaged over
+       piece to our guidance on how to the phone. Your incident will then be
+       protect yourself from cyber attacks1. passed onto the Report Fraud Analysis
+                               Service who will review your report and
+       If you’re a larger business, or face a conduct a range of enquiries, it may
+       greater impact from a cyber incident, then get passed to the relevant law
+       then the Incident Management section enforcement agency. You will be kept
+       in 10 Steps to Cyber Security2 can further informed of the status of your report.
+       help your cyber response.
+       Board members should refer to our If your organisation has been the victim
+       guidance on planning your response of a significant cyber attack4, the NCSC
+       to cyber incidents3.    recommends that you start
+                               by reporting the incident to us5.
+          UK
+        businesses
+              UK  of businesses/charities £3,230
+             charities identified cyber security is the average annual cost for organisations
+                  breaches or attacks in that identified breaches with an outcome
+                  the last 12 months
+         46%  26%
+         Among the 46%/26% identifying
+             breaches or attacks:
+          27%          20%           14%      32%
+          42%          33%           22%      22%
+       Needed new   Added staff time to had staff stopped identified at
+       measures to prevent deal with breach or from carrying out least one breach
+       future attacks inform others daily work or attack a week
+       *Source: The Department for Digital, Culture, Media and Sport’s ‘Cyber Security Breaches Survey 2020’
+                                    National Cyber Security Centre 3
+
+     Step  1:                Next, identify what business processes
+                             and systems are critical to keep your
+     Prepare  for
+                             organisation running. For example, the
+                             website where your customers place
+     Incidents
+                             orders, or the computer-controlled
+                             manufacturing equipment you use.
+     Unforeseen events, both malicious and If you’ve not already done so, identify
+     accidental, can occur in many ways. these key systems and processes as
+     So it is impractical to develop detailed soon as possible, and record where
+     step-by-step instructions to manage they are stored (or how they are
+     every type of incident, as the list could accessed).
+     be endless. Instead you should prepare
+     your business for the most common
+     threats you face by developing plans ACTION POINT: Assign joint
+     to handle those incidents most likely (or shared) responsibility with
+     to occur.                   another person to ensure
+                                 there’s cover when you aren’t
+     Identify critical systems and assets available (for instance when
+     Identify what electronic information on holiday, or away with
+     is essential to keep your organisation business). Ensure key
+     running, such as contact details, emails, documents are made
+     calendars, and essential documents. available and are up to date
+     Find out where this information is stored. so that in the event of your
+     Is it on single machine in your office? Is absence they can be shared/
+     it on a remote server? Is it stored in the learnt by other relevant
+     cloud, by a third party?    people.
+         ACTION POINT: Make a regular Finally, think in advance about how
+         daily/weekly back up copy of you could minimise reputational
+         essential information. Regularly damage in the event of an incident.
+         test that the backup is working Which key partners do you need to talk
+         to ensure you can restore to? Building a good relationship with
+         information from it. your partners, where you talk regularly
+                             before an event has even occurred, will
+                             make things a lot smoother in the event
+                             of an incident.
+
+     4  National Cyber Security Centre
+
+                               Put risk on the agenda
+           ACTION POINT: Make a list Discussions about organisational risk
+           of which key partners (what you value, and what you’re
+           (customers, suppliers, third doing to protect it) should be part of
+           parties, etc) that you would normal business. Make time to discuss
+           need to contact as a result these at your management meetings
+           of different types of incident. or weekly catch-ups. Find out where
+           For example, you would cyber security threats sit in the priority
+           need to contact customers list when compared to physical threats
+           and banks if payment data (like burglary and stock theft), flood,
+           was compromised, suppliers legal action, and health and safety.
+           if corporate accounts were The steps you choose to take to reduce
+           attacked, and the ICO if the risk to your business have got to be
+           personal customer data proportionate to the risks you take, and
+           was stolen.         of course affordable.
+                               Organisations that are considering
+       Prioritise the risk, and manage it cyber insurance should understand that
+       Consider what would happen if you it will not protect you from an attack,
+       no longer had access to the critical but it may provide you with additional
+       systems or assets you’ve identified resources during and after an incident.
+       above. By understanding: So cyber insurance can be considered
+                               as an additional risk management tool,
+       • what’s important to your business but do take time to:
+       • why it’s important, and
+       • what you are doing to protect them • understand the scope and scale
+                                of the cover provided
+       -you can prioritise where you need • ensure that you are able to meet any
+       the most protection. If you need more operational requirements placed on
+       help with identifying your ‘crown jewels’ you by the insurer
+       (i.e. the things most valuable to your
+       organisation), please refer to our
+       guidance on establishing your baseline
+       and identifying what you care about
+       most6.
+
+       6 https://www.ncsc.gov.uk/collection/board-toolkit/
+       establishing-baseline-identifying-care-about-most
+
+                                    National Cyber Security Centre 5
+
+     Make an incident plan   Create a list of external people you
+     Make sure you keep the important need to contact who can help you
+     information you identified above in identify an incident. For example,
+     a safe place so that you can use it if your web hosting provider, IT support
+     your equipment is stolen or damaged services or cloud service provider.
+     by a cyber attack. Ensure you know Document the details of the contract,
+     how to restore a backup in the event including what is covered, how they
+     of any type of data loss, such as a can help you, and at what point
+     ransomware attack7, and train the do you need to engage with them.
+     relevant people in your organisation so Being prepared and having relevant
+     they can do the same. Assign roles to documents accessible and up to date
+     members of staff, and document who could save you time post incident.
+     owns each responsibility in the event
+     of an incident, and how can they be
+     contacted.                  ACTION POINT: Have you got
+                                 the most up to date contact
+                                 information for those you need
+         ACTION POINT: The best way to to contact? Is it stored in the
+         test your staff’s understanding right place and easy to access,
+         of what’s required during an keeping in mind that your
+         incident is through exercising. normal means of
+         Consider using the NCSC’s communication may be
+         free Exercise in a Box product8 disrupted during an incident?
+         to test your organisations Schedule in time to check
+         resilience and preparedness. these details every couple of
+                                 months or as necessary.
+     Understand and document possible
+     incident ‘trigger points’ such as when If you have Cyber Insurance, have
+     ownership of an action or decision your insurer’s details documented
+     transfers between people. For example, including policy number and any
+     an employee may own the action to specific information your provider asks
+     identify when there’s an issue with the for. Understand any legal or regulatory
+     website, but once that has been done, compliance you must adhere to and
+     who decides if the website should be implement any guidelines/policies/rules
+     shut down? Your plan should identify at they set out for you. You should check
+     what point senior management needs if your trade association has any help
+     to be involved.         or advice lines that you can contact to
+                             help you in this situation.
+     7 https://www.ncsc.gov.uk/guidance/protecting-
+     your-organisation-ransomware
+     8 https://www.ncsc.gov.uk/information/exercise-in-
+     a-box
+     6  National Cyber Security Centre
+
+       Step  2:
+                               10 crucial questions
+       Identify what’s
+                               1. What problem has been reported,
+                                 and by who?
+       happening
+                               2. What services, programs and/or
+                                 hardware aren’t working?
+       The first step in dealing effectively with 3. Are there any signs that data has
+       an incident involves identifying it. That been lost? For example, have you
+       is, how can you detect that an incident received ransom requests, or has
+       has occurred (or is still happening)? your data been posted on the
+                                 internet?
+       Find out if you are being 4. What information (if any) has been
+       (or have been) attacked   disclosed to unauthorised parties,
+       Things that might indicate a cyber deleted or corrupted?
+       incident include:       5. Have your customers noticed
+                                 any problems? Can they use
+       • computers running slowly your services?
+       • users being locked out of their 6. Who designed the affected system,
+        accounts                 and who maintains it?
+       • users being unable to access 7. When did the problem occur or
+        documents                first come to your attention?
+       • messages demanding a ransom 8. What is the scope of the problem,
+        for the release of your files what areas of the organisation
+       • people informing you of strange are affected?
+        emails coming out of your domain 9. Have there been any signs as
+       • redirected internet searches to whether the problem has
+       • requests for unauthorised payments occurred internally within your
+       • unusual account activity organisation or externally through
+                                 your supply chain?
+       Find out what’s happened 10. What is the potential business
+       The following 10 questions can help impact of the incident?
+       you identify what has occurred. It’s
+       a starting point that you can use to
+       gather vital information as soon as you
+       suspect something has gone wrong.
+       The answers will help you provide
+       essential information to your internal or
+       external IT team who will be resolving
+       the problem, and form part of your
+       incident review/lessons learnt report.
+                                    National Cyber Security Centre 7
+
+     Stop the incident getting any worse
+     Take a look at your security software
+     (such as antivirus alerts and server/
+     audit logs) to see if you are able to
+     identify the specifics of the attack, and
+     subsequently the cause of the incident.
+     If you are unable to do this (but you
+     know which device has been affected)
+     run your antivirus programme to
+     complete a full scan9, and take notes
+     of the results it gives you. If nothing is
+     found, consider using an alternative
+     antivirus programme.
+     Use the information you have gathered
+     to look for advice online from trusted
+     sources such as police or security
+     websites. You may be able to find
+     instructions there on how to fix the
+     problem, although care should be taken
+     before acting on unverified advice.
+     In the case of internet outage, contact
+     your ISP (using the details you’ve
+     already identified in your incident plan)
+     in the first instance; most will have
+     pages that relate to service availability.
+     You might learn that the outage is due
+     to a fallen tree, rather than a DDoS
+     attack. In addition, ensure that you
+     understand your provider’s escalation
+     process, and know what data they need
+     to act on, and what type of SLA/support
+     you have paid for.
+
+     9 https://www.ncsc.gov.uk/guidance/what-is-an-
+     antivirus-product
+
+     8  National Cyber Security Centre
+
+       Step  3:
+                                   ACTION POINT: If you’re
+       Resolve  the
+                                   considering using services
+                                   from a cyber security
+       incident                    consultant10, take appropriate
+                                   steps to make sure you use
+       The actions in this step will help your reputable organisations,
+       organisation get back up-and-running understand their experience,
+       as soon as possible. You’ll also need to and know how their offer
+       confirm that everything is functioning meets your requirements
+       normally, and fix any problems. and your business type.
+                                   Relevant technology
+       If your IT is managed externally: qualifications are a plus.
+       contact the right people to help This will help you to choose
+       Contact your external IT providers a provider that suits your
+       (that you’ve identified in Step 1) to help organisation.
+       you fix the problem. These contacts are
+       there to fix the problem and establish
+       the impact to your organisation.
+       If you manage your own IT:
+       put your plan into action
+       It’s time to activate the incident plan
+       you made in Step 1. Depending on the
+       type of incident you are responding to,
+       this may involve:
+       • replacing infected hardware
+       • restoring services through backups
+       • patching software
+       • cleaning infected machines
+       • changing passwords
+
+       10 https://www.ncsc.gov.uk/section/products-
+       services/all-products-services-categories?productTy
+       pe=Consultancy&start=0&rows=20
+                                    National Cyber Security Centre 9
+
+     Step  4:
+                             Keep everyone informed
+                             It’s important to keep your staff and
+     Report  the incident
+                             customers informed of anything that
+                             might affect them (for example, if their
+     to the wider
+                             personal data has been compromised
+                             by a breach).
+     stakeholders
+     Once a cyber security incident has ACTION POINT: Make staff
+     been resolved, formal reporting will aware of any incidents at a
+     often be required to both internal time that is proportionate to
+     and external stakeholders. There are the effect of the incident. So,
+     certain incidents that you’re legally if you have experienced a
+     obliged to report to the Information minor incident out of hours,
+     Commissioner’s Office (ICO), regardless is it proportionate to contact
+     of whether your IT is outsourced. Check staff in the middle of the
+     the ICO website11 to find out which night? If relevant, contact
+     incidents require this. Other regulatory your customers as soon as
+     bodies which you belong to may also possible through the most
+     require you to report a breach. appropriate channels.
+     Report to law enforcement
+     Always remember that a cyber attack Consider legal advice
+     is a crime. Report to law enforcement You might want to consider seeking
+     via Report Fraud12 or through Police legal advice if the incident has had a
+     Scotland’s 101 call centre. The NCSC significant impact on your business
+     strongly encourage the reporting of a and/or customers. If you have a cyber
+     cyber incident; many go unreported insurance policy, they will be able to
+     because of personal embarrassment. provide you with more advice.
+     However, if a cyber incident has been
+     committed against you, someone else
+     may have suffered a similar crime. The
+     more individuals report, the more likely
+     it is that perpetrators will be arrested,
+     charged and convicted.
+     11 https://ico.org.uk/for-organisations/report-a-
+     breach/
+     12 https://www.reportfraud.police.uk/reporting-a-
+     fraud/
+     10 National Cyber Security Centre
+
+       Step  5:
+                               Strengthen your defences
+                               Reassess your risk and make any
+       Learn  from  the
+                               necessary changes. For example,
+                               if you were a victim of a password
+       incident
+                               attack you may need to create a
+                               new password policy, provide new
+       After the incident, it’s important to: training, provide physical secure
+                               storage for passwords (or password
+       •review what has happened manager apps) for your staff.
+       •learn from any mistakes
+       •take action to try and reduce the Consider the terms of your contracts
+       likelihood of it happening again Depending on how successful the
+                               incident response was, you may need
+       Not only is it important to review your to make a strategic decision on your
+       technical controls after the incident, it is third party contracts. You might want to
+       also a great opportunity to review and consider the following:
+       implement staff awareness or training
+       measures to help develop your staff’s • Does this incident mean the way that
+       security culture.        you do business has to change?
+                               • If you currently outsource, did their
+       Review actions taken during response response meet your needs?
+       Collate and review the actions you • If they didn’t meet your needs
+       documented throughout the response consider renegotiating the terms of
+       to the incident. Make a list of things the contract or cancel, changing to
+       that went well and things that could be a new company.
+       improved from the response stage. • Did you have the skills in-house to
+                                do it yourself, negating the need to
+       Review and update your incident plan outsource in the future?
+       Where necessary, make changes to the
+       incident plan you created in Step 1, to
+       reflect the lessons learnt.
+
+                                    National Cyber Security Centre 11
+
+     For further information, or to contact us, please visit: www.ncsc.gov.uk
+
+        @NCSC
+
+        National Cyber Security Centre
+        @cyberhq
+
+     © Crown copyright 2020. Photographs produced with permission from third parties.
+     NCSC information licensed for re-use under Open Government Licence
+     (http://www.nationalarchives.gov.uk/doc/open-government-licence).
+     Information correct at the time of publication - October 2020
+     References to Action Fraud removed April 2026; no other changes made.
+        Designed and created by Agent Marketing Ltd.
+        agentmarketing.co.uk

@@ -1,0 +1,15 @@
+{
+  "generated": "2026-08-18",
+  "documents": {
+    "CYB-003": {
+      "source_file": "CYB/CYB-003_ACSC_practitioner_guidance.pdf",
+      "type": "pdf",
+      "scope": "pages",
+      "reason": "Screening decision 7.2: scope limited to Appendices A, B and H. Page range verified by hand in a PDF viewer: Appendix A opens on page 29 (printed page 25), Appendix I opens on page 48, so pages 29-47 are kept. Page numbers are PDF viewer positions, not printed page numbers; the two differ by four in this document.",
+      "word_count": 4060,
+      "manual_review": false,
+      "total_pages": 51,
+      "pages_extracted": 19
+    }
+  }
+}
