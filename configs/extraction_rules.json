@@ -13,20 +13,32 @@
       "type": "pdf",
       "scope": "pages",
       "pages": [
-        31,
-        50
+        [
+          31,
+          35
+        ],
+        [
+          41,
+          43
+        ]
       ],
-      "reason": "Screening decision 7.2: scope limited to Appendices A, B and H, the only prose sections; the numbered chapters are fill-in template instructions. Page range verified by hand in a PDF viewer: Appendix A opens on page 31, Appendix I opens on page 51, so pages 31-50 are kept. Marker-based slicing was tried first and abandoned: the word 'Appendix' appears throughout the body as cross-references (for example 'Refer to Appendix I'), so it cannot be distinguished from a section heading."
+      "reason": "Screening decision 7.2: scope limited to Appendices A, B and H. Page positions were verified by hand in a PDF viewer and then confirmed page by page against the extracted text: 31 is Appendix A (terminology), 32-35 are Appendix B (readiness checklist), 41-43 are the prose part of Appendix H (post-incident review). Pages 36-40 and 44-50 are excluded because they are Appendices C to G and the PIR analysis form - blank templates that cannot serve as evidence. Excluding 38-40 also removes a defect: those pages are landscape tables and pdfplumber returns their text character-reversed ('xidneppA' for 'Appendix'). Marker-based slicing was tried first and abandoned because the word 'Appendix' appears throughout the body as cross-references."
     },
     "CYB-003": {
       "file": "CYB/CYB-003_ACSC_practitioner_guidance.pdf",
       "type": "pdf",
       "scope": "pages",
       "pages": [
-        29,
-        47
+        [
+          29,
+          33
+        ],
+        [
+          40,
+          42
+        ]
       ],
-      "reason": "Screening decision 7.2: scope limited to Appendices A, B and H. Page range verified by hand in a PDF viewer: Appendix A opens on page 29 (printed page 25), Appendix I opens on page 48, so pages 29-47 are kept. Page numbers are PDF viewer positions, not printed page numbers; the two differ by four in this document."
+      "reason": "Screening decision 7.2: scope limited to Appendices A, B and H. Verified page by page against the extracted text: 29-30 are Appendix A (terminology and definitions), 31-33 are Appendix B (readiness checklist), 40-42 are the prose part of Appendix H (post cybersecurity incident reviews, including the hot debrief and formal debrief guidance). Pages 34-39 and 43-47 are excluded as Appendices C to G and the PIR analysis form. Page numbers are PDF viewer positions, not printed page numbers; the two differ by four in this document."
     },
     "CYB-004": {
       "file": "CYB/CYB-004_NIST_SP800-61r3.pdf",
@@ -61,16 +73,14 @@
       "file": "DIS/DIS-004_NWS_flood_watch_vs_warning.html",
       "type": "html",
       "scope": "full",
+      "content_selector": ".cms-content",
       "drop_selectors": [
-        "nav",
-        "header",
-        "footer",
         "script",
         "style",
         "noscript",
         "form"
       ],
-      "reason": "Definitional page; four alert-level definitions."
+      "reason": "Definitional page giving the four flood alert levels. weather.gov contains no <nav>, <header>, <footer> or <main> elements, so dropping by tag removed nothing and the first extraction carried roughly 140 words of site menu into the corpus. The article is held in '.cms-content'; selecting it directly yields 237 words of body text."
     },
     "INF-001": {
       "file": "INF/INF-001_FEMA_power_outage_info_sheet.pdf",

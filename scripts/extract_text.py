@@ -96,10 +96,14 @@ def extract_pdf(path: Path, rule: dict, doc_id: str) -> tuple[str, dict]:
     with pdfplumber.open(path) as pdf:
         total_pages = len(pdf.pages)
         if scope == "pages":
-            first, last = rule["pages"]
-            if not (1 <= first <= last <= total_pages):
-                die(f"{doc_id}: page range {first}-{last} outside document (1-{total_pages})")
-            selected = range(first - 1, last)
+            spec = rule["pages"]
+            # Accept either a single range [a, b] or a list of ranges [[a, b], [c, d]].
+            ranges = [spec] if spec and isinstance(spec[0], int) else spec
+            selected = []
+            for first, last in ranges:
+                if not (1 <= first <= last <= total_pages):
+                    die(f"{doc_id}: page range {first}-{last} outside document (1-{total_pages})")
+                selected.extend(range(first - 1, last))
         else:
             selected = range(total_pages)
 
@@ -132,13 +136,23 @@ def extract_html(path: Path, rule: dict, doc_id: str) -> tuple[str, dict]:
             node.decompose()
             dropped += 1
 
+    # Some government sites predate semantic HTML5 and have no <nav>/<main>/<footer>
+    # at all, so dropping by tag removes nothing. Where that is the case, name the
+    # element that actually holds the article instead.
+    selector = rule.get("content_selector")
+    if selector:
+        node = soup.select_one(selector)
+        if node is None:
+            die(f"{doc_id}: content_selector {selector!r} matched nothing")
+        soup = node
+
     text = soup.get_text(separator="\n")
     text = re.sub(r"[ \t]+", " ", text)
 
     if rule.get("scope") == "markers":
         text = slice_by_markers(text, rule.get("start_marker"), rule.get("end_marker"), doc_id)
 
-    info = {"elements_dropped": dropped}
+    info = {"elements_dropped": dropped, "content_selector": rule.get("content_selector")}
     return normalise_whitespace(text), info
 
 
