@@ -46,3 +46,4 @@ logs/
 
 # Do NOT ignore .gitkeep
 !.gitkeep
+mintty.*.png
