@@ -2,7 +2,7 @@
 
 - **Issue:** #10
 - **Branch:** `task/issue-010-disaster-corpus-metadata`
-- **Commit:** `<isi sebelum push terakhir>`
+- **Commit:** `00d9587`
 - **Date:** 2026-08-18
 
 ---
