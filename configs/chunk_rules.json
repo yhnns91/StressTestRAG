@@ -1,0 +1,262 @@
+{
+  "_comment": "Section headings per document, used by scripts/build_chunks.py to place chunk boundaries. Assignment section 7.1 requires a chunk to hold one self-contained unit of meaning, so boundaries follow the document's own headings rather than a token target. Headings are matched against whole lines after whitespace normalisation, case-insensitively. Anything before the first heading becomes a leading chunk carrying the heading given in `preamble_heading`.",
+  "chunking": {
+    "target_tokens": 250,
+    "min_tokens": 25,
+    "max_tokens": 320,
+    "split_long_sections_on": "blank_line",
+    "_note_target": "target_tokens and max_tokens follow docs/schema.md (180-320). min_tokens is far below that range on purpose: section 7.1 allows short checklists and FAQ entries to form smaller chunks, and much of this corpus is exactly that. The four NWS flood alert definitions run 34-100 tokens each and are the intended evidence for three baseline questions, so a 180 token floor would discard them. Anything under 25 tokens is an extraction fragment rather than a unit of meaning.",
+    "template_markers": [
+      "include a summary of",
+      "include information about",
+      "include the purpose",
+      "include the process",
+      "include process for",
+      "include commonly used terms",
+      "in your cirp, include",
+      "detail any resulting actions",
+      "include a list of",
+      "include details of"
+    ],
+    "_note_markers": "A chunk whose text is dominated by these phrases is an instruction telling the reader to supply their own content, not a fact that can answer a question. Such chunks are written out with quality_flag = rejected rather than dropped, so the exclusion stays auditable (CYB screening report, risk 7.3). Flagging is automatic and the resulting list must be reviewed by hand.",
+    "non_evidence_headings": [
+      "take an active",
+      "take an active role in",
+      "front matter",
+      "flooding resources",
+      "disclaimer:",
+      "learn more",
+      "explore more resources"
+    ],
+    "_note_non_evidence": "Publisher furniture: app promotions, page banners and disclaimers. Written out with quality_flag = rejected so the exclusion stays visible rather than silently dropped."
+  },
+  "documents": {
+    "CYB-001": {
+      "preamble_heading": "Front matter",
+      "headings": [
+        "What is an incident?",
+        "Introduction",
+        {
+          "match": "Step 1:",
+          "label": "Step 1: Prepare for incidents"
+        },
+        {
+          "match": "Step 2:",
+          "label": "Step 2: Identify what is happening"
+        },
+        {
+          "match": "Step 3:",
+          "label": "Step 3: Resolve the incident"
+        },
+        {
+          "match": "Step 4:",
+          "label": "Step 4: Report the incident"
+        },
+        {
+          "match": "Step 5:",
+          "label": "Step 5: Learn from the incident"
+        }
+      ]
+    },
+    "CYB-002": {
+      "preamble_heading": "Front matter",
+      "headings": [
+        {
+          "match": "Appendix A",
+          "label": "Appendix A: Terminology and definitions"
+        },
+        "Terminology and Definitions",
+        "Cyber threat",
+        "Cyber security event",
+        "Cyber security alert",
+        "Cyber incident",
+        {
+          "match": "Appendix B",
+          "label": "Appendix B: Readiness checklist"
+        },
+        "Cyber Incident Response Readiness Checklist",
+        "PREPARATION",
+        "COMMUNICATIONS",
+        "INCIDENT NOTIFICATION AND REPORTING",
+        "POST INCIDENT REVIEW",
+        {
+          "match": "Appendix H",
+          "label": "Appendix H: Post incident reviews"
+        },
+        "Post Incident Review Guide",
+        "How to use the guide",
+        "Post Incident Review Steps",
+        "Step 1 - Hold incident debriefs",
+        "Hot debrief guidance",
+        "Formal debrief guidance",
+        "Step 2 - Complete incident documentation"
+      ]
+    },
+    "CYB-003": {
+      "preamble_heading": "Front matter",
+      "headings": [
+        "Appendix A: Terminology and definitions",
+        "Cyberthreat",
+        "Cybersecurity alert",
+        "Cybersecurity event",
+        "Cybersecurity incident",
+        {
+          "match": "Appendix B: Cybersecurity incident response",
+          "label": "Appendix B: Readiness checklist"
+        },
+        "PREPARATION",
+        "COMMUNICATIONS",
+        "POST CYBERSECURITY INCIDENT REVIEW",
+        "Appendix H: Post cybersecurity incident reviews",
+        "How to use this guide",
+        "Post cybersecurity incident review steps",
+        "Hot debrief guidance",
+        "Formal debrief guidance"
+      ]
+    },
+    "CYB-004": {
+      "preamble_heading": "Front matter",
+      "headings": [
+        "Executive Summary",
+        "1. Introduction",
+        "1.1. Purpose and Scope",
+        "1.2. Document Structure",
+        "2. Incident Response as Part of Cybersecurity Risk Management",
+        "2.1. Incident Response Life Cycle Model",
+        "2.2. Incident Response Roles and Responsibilities",
+        "2.3. Incident Response Policies, Processes, and Procedures"
+      ]
+    },
+    "DIS-001": {
+      "preamble_heading": "Hazard overview and immediate actions",
+      "headings": [
+        {
+          "match": "Prepare",
+          "label": "Prepare NOW"
+        },
+        {
+          "match": "Survive",
+          "label": "Survive DURING"
+        },
+        {
+          "match": "Be Safe",
+          "label": "Be Safe AFTER"
+        },
+        {
+          "match": "Take an Active",
+          "label": "Take an Active Role in Your Safety"
+        }
+      ]
+    },
+    "DIS-002": {
+      "preamble_heading": "Hazard overview and immediate actions",
+      "headings": [
+        {
+          "match": "Prepare",
+          "label": "Prepare NOW"
+        },
+        {
+          "match": "Survive",
+          "label": "Survive DURING"
+        },
+        {
+          "match": "Be Safe",
+          "label": "Be Safe AFTER"
+        },
+        {
+          "match": "Take an Active",
+          "label": "Take an Active Role in Your Safety"
+        }
+      ]
+    },
+    "DIS-003": {
+      "preamble_heading": "Hazard overview and immediate actions",
+      "headings": [
+        {
+          "match": "Prepare",
+          "label": "Prepare NOW"
+        },
+        {
+          "match": "Survive",
+          "label": "Survive DURING"
+        },
+        {
+          "match": "Be Safe",
+          "label": "Be Safe AFTER"
+        },
+        {
+          "match": "Take an Active",
+          "label": "Take an Active Role in Your Safety"
+        }
+      ]
+    },
+    "DIS-004": {
+      "preamble_heading": "Flooding Resources",
+      "headings": [
+        "Flash Flood Warning: Take Action!",
+        "Flood Warning: Take Action!",
+        "Flood Advisory: Be Aware:",
+        "Flood Watch: Be Prepared:"
+      ]
+    },
+    "INF-001": {
+      "preamble_heading": "Hazard overview and immediate actions",
+      "headings": [
+        {
+          "match": "Prepare",
+          "label": "Prepare NOW"
+        },
+        {
+          "match": "Survive",
+          "label": "Survive DURING"
+        },
+        {
+          "match": "Be Safe",
+          "label": "Be Safe AFTER"
+        },
+        {
+          "match": "Be Prepared. Multiple Disasters",
+          "label": "Concurrent disasters"
+        },
+        {
+          "match": "Take an Active Role in",
+          "label": "Take an Active Role in Your Safety"
+        }
+      ]
+    },
+    "INF-002": {
+      "preamble_heading": "Portable Generator Hazards",
+      "headings": [
+        "Carbon Monoxide Hazards",
+        "Electrical Hazards",
+        "Fire Hazards"
+      ]
+    },
+    "INF-003": {
+      "preamble_heading": "Power Outages",
+      "headings": [
+        {
+          "match": "Plan Ahead",
+          "label": "Power outages: plan ahead"
+        },
+        "During a Power Outage",
+        "After a Power Outage",
+        "Refrigerated Foods",
+        "Unsafe Foods",
+        "Safe-to-Eat Foods",
+        "Frozen Foods",
+        "Flooding",
+        "After a Flood",
+        "Salvaging All-Metal Cans & Retort Pouches",
+        "Fires"
+      ]
+    },
+    "INF-004": {
+      "preamble_heading": "Staying informed during a power outage",
+      "headings": [
+        "Disclaimer:"
+      ],
+      "_note": "The five bullets run 8-58 tokens each; splitting on them would produce fragments below any sensible floor. The body is kept as one chunk, which matches the INF screening report note that this document yields approximately one chunk."
+    }
+  }
+}
