@@ -5,12 +5,16 @@
       "source_file": "CYB/CYB-001_NCSC_response_and_recovery.pdf",
       "type": "pdf",
       "scope": "full",
-      "reason": "12-page guide, all prose.",
-      "word_count": 2943,
+      "reason": "12-page guide, all prose. Page 3 is set in two columns whose gutter carries no measurable whitespace, so automatic detection returns a single column and the Introduction and 'What is an incident?' sections interleave line by line. The boundary is given explicitly at x=210 for that page only; the remaining pages detect their columns correctly.",
+      "word_count": 2952,
       "manual_review": false,
       "total_pages": 12,
       "pages_extracted": 12,
-      "column_splits": null
+      "column_splits": {
+        "3": [
+          210
+        ]
+      }
     },
     "CYB-002": {
       "source_file": "CYB/CYB-002_ACSC_cyber_incident_response_plan_guidance.pdf",

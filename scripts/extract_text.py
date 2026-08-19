@@ -110,10 +110,17 @@ def extract_pdf(path: Path, rule: dict, doc_id: str) -> tuple[str, dict]:
         else:
             selected = range(total_pages)
 
-        splits = rule.get("column_splits")
+        # column_splits is either a list applying to every page, or a mapping of
+        # page number to list so that a single awkward page can be corrected
+        # without disturbing the rest of the document.
+        spec = rule.get("column_splits")
         for i in selected:
-            # Multi-column infographic pages must be read column by column, or the
-            # sections interleave line by line. See columns.py for the reasoning.
+            if isinstance(spec, dict):
+                splits = spec.get(str(i + 1))
+            else:
+                splits = spec
+            # Multi-column pages must be read column by column, or the sections
+            # interleave line by line. See columns.py for the reasoning.
             pages_text.append(page_text(pdf.pages[i], splits=splits))
 
     text = PAGE_BREAK.join(pages_text)
