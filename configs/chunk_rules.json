@@ -2,10 +2,10 @@
   "_comment": "Section headings per document, used by scripts/build_chunks.py to place chunk boundaries. Assignment section 7.1 requires a chunk to hold one self-contained unit of meaning, so boundaries follow the document's own headings rather than a token target. Headings are matched against whole lines after whitespace normalisation, case-insensitively. Anything before the first heading becomes a leading chunk carrying the heading given in `preamble_heading`.",
   "chunking": {
     "target_tokens": 250,
-    "min_tokens": 25,
+    "min_tokens": 15,
     "max_tokens": 320,
     "split_long_sections_on": "blank_line",
-    "_note_target": "target_tokens and max_tokens follow docs/schema.md (180-320). min_tokens is far below that range on purpose: section 7.1 allows short checklists and FAQ entries to form smaller chunks, and much of this corpus is exactly that. The four NWS flood alert definitions run 34-100 tokens each and are the intended evidence for three baseline questions, so a 180 token floor would discard them. Anything under 25 tokens is an extraction fragment rather than a unit of meaning.",
+    "_note_target": "target_tokens and max_tokens follow docs/schema.md (180-320). min_tokens is far below that range on purpose: section 7.1 allows short checklists and FAQ entries to form smaller chunks, and much of this corpus is exactly that. The four NWS flood alert definitions run 23-100 tokens each and are the intended evidence for three baseline questions, so a 180 token floor would discard them. The floor was lowered from 25 to 15 after review: at 25 it was rejecting the USDA rule 'Never taste food to determine its safety. When In Doubt, Throw It Out!' (19 tokens) and the NWS page's own framing question (23 tokens), both of which are self-contained units of meaning. Anything under 15 tokens is an extraction fragment rather than a unit of meaning.",
     "template_markers": [
       "include a summary of",
       "include information about",
@@ -23,12 +23,11 @@
       "take an active",
       "take an active role in",
       "front matter",
-      "flooding resources",
       "disclaimer:",
       "learn more",
       "explore more resources"
     ],
-    "_note_non_evidence": "Publisher furniture: app promotions, page banners and disclaimers. Written out with quality_flag = rejected so the exclusion stays visible rather than silently dropped."
+    "_note_non_evidence": "Headings whose sections are page furniture rather than guidance: cover blocks, publisher front matter, app promotions and legal disclaimers. 'Flooding Resources' was removed from this list after review - despite the navigational-sounding name, that section carries the question the whole NWS page answers ('What is the difference between a Flood Watch and a Flood Warning?'), which is the framing for three baseline questions."
   },
   "documents": {
     "CYB-001": {

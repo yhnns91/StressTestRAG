@@ -175,12 +175,17 @@ def split_long(body: str, max_tokens: int, target: int) -> list[str]:
 def is_template(text: str, markers: list[str]) -> bool:
     """True when the text is an instruction to the reader rather than a fact."""
     low = text.lower()
-    hits = sum(1 for m in markers if m in low)
-    if not hits:
+    lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
+    if not lines:
         return False
-    # One marker inside a long passage is a passing remark; a short passage built
-    # around such a phrase is a template instruction.
-    return hits >= 2 or len(text.split()) < 90
+    flagged = sum(1 for ln in lines if any(m in ln.lower() for m in markers))
+    if not flagged:
+        return False
+    # A chunk counts as a template instruction only when the instruction is what
+    # the chunk is FOR. One "In your CIRP, include..." line appended to a real
+    # definition does not make the definition a template, and marking it as one
+    # would put a wrong reason in the audit trail.
+    return flagged / len(lines) >= 0.5
 
 
 def build(doc_id: str, meta: dict, rule: dict, cfg: dict) -> list[dict]:
@@ -206,7 +211,13 @@ def build(doc_id: str, meta: dict, rule: dict, cfg: dict) -> list[dict]:
             elif tokens < min_tokens:
                 flag, note = "rejected", f"fragment below {min_tokens} tokens"
             elif tokens > max_tokens:
-                flag, note = "pending", "single item above 320 tokens, kept whole (section 7.1)"
+                # Section 7.1 forbids splitting a single unit of meaning to meet a
+                # token target, and the schema allows a documented deviation, so
+                # the decision is recorded rather than left hanging as pending.
+                flag, note = "approved", (
+                    f"{tokens} tokens, above the 320 target; kept whole because splitting "
+                    "would divide one unit of meaning (section 7.1)"
+                )
             elif tokens < 180:
                 flag, note = "approved", "short section; section 7.1 permits smaller chunks"
             else:
