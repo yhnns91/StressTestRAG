@@ -2,7 +2,7 @@
 
 - **Issue:** #14
 - **Branch:** `task/issue-014-chunking-ground-truth`
-- **Commit:** `<isi sebelum push terakhir>`
+- **Commit:** `9e9c041`
 - **Date:** 2026-08-19
 
 ---
