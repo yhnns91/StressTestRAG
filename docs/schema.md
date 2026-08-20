@@ -64,7 +64,8 @@ Every schema change must be recorded in `CHANGELOG.md` and reflected here.
   "token_count": 216,
   "paragraph_index": 7,
   "source_url": "https://example.gov/outage-safety",
-  "quality_flag": "approved"
+  "quality_flag": "approved",
+  "note": ""
 }
 ```
 
@@ -78,6 +79,7 @@ Every schema change must be recorded in `CHANGELOG.md` and reflected here.
 | `paragraph_index` | int | Position within the document, for source trace. |
 | `source_url` | string | Inherited from the document. |
 | `quality_flag` | enum | `approved`, `pending`, `rejected` |
+| `note` | string | Reason recorded when `quality_flag` is not `approved`, or when `token_count` falls outside the 180-320 range. Empty for ordinary approved chunks. |
 
 ---
 
