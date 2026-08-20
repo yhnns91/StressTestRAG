@@ -1,0 +1,258 @@
+Appendix A: Terminology and definitions
+Use of consistent and pre-defined terminology to describe cybersecurity incidents and their effects can be helpful as
+part of cybersecurity incident response planning.
+Cyberthreat
+A cyberthreat is any circumstance or event with the potential to harm systems or data.
+Examples of cyberthreats include (but are not limited to):
+ business email compromise
+ cybercrime
+ cyber supply chain compromise
+ exploitation of vulnerabilities
+ phishing emails and scams
+ ransomware.
+Cybersecurity alert
+A cybersecurity alert is a notification generated in response to a deviation from normal behaviour. Cybersecurity
+alerts are used to highlight cybersecurity events.
+Cybersecurity event
+A cybersecurity event is an occurrence of a system, service or network state indicating a possible breach of security
+policy, failure of safeguards or a previously unknown situation that may be relevant to security.
+Examples of cybersecurity events include (but are not limited to):
+ a user has disabled the antivirus on their computer
+ a user has deleted or modified system files
+ a user restarted a server
+ unauthorised access to a server or computer.
+Cybersecurity incident
+An unwanted or unexpected cybersecurity event, or a series of such events, that either has compromised business
+operations or has a significant probability of compromising business operations.
+Examples of cybersecurity incidents include (but are not limited to):
+ denial-of-service attacks
+Cybersecurity incident response planning: Practitioner guidance 25
+ unauthorised access or attempts to access a system
+ compromise of sensitive data
+ virus or malware outbreak (including ransomware).
+Cybersecurity incident response planning: Practitioner guidance
+26
+Appendix B: Cybersecurity incident response
+readiness checklist
+This checklist is provided to aid the initial assessment of an organisation’s readiness to respond to a cybersecurity
+incident. This checklist is not an exhaustive list of all readiness activities.
+PREPARATION
+Your organisation has a cybersecurity policy or strategy that outlines your organisation’s approach to
+prevention, preparedness, detection, response, recovery, review and improvement. For example, your
+☐
+organisation has a position on not paying ransoms, reporting cybersecurity incidents to government,
+publicly acknowledging cybersecurity incidents, and sharing information about cybersecurity incidents
+with trusted industry and government partners.
+A CIRP has been developed which:
+ aligns with your organisation’s operating environment, including emergency management and
+business continuity processes and procedures
+☐
+ has been reviewed or tested in an exercise to ensure it is current and responsible personnel are aware
+of their roles and responsibilities
+ includes supporting templates, for example situation reports.
+☐ Personnel involved in managing cybersecurity incidents have received cybersecurity incident response
+training.
+Up-to-date hard copy versions of the CIRP and playbooks are stored in a secure location (in case of
+☐
+electronic or hardware failure) and are accessible to authorised personnel.
+Specific playbooks to supplement the CIRP have been developed and define step-by-step guidance for
+☐
+response actions to common cybersecurity incidents.
+☐ A CIRT and SEMT, or equivalents, have been identified to manage any responses to cybersecurity
+incidents.
+☐ All relevant IT and OT SOPs are documented and have been reviewed or tested in an exercise to ensure
+they are current and responsible personnel are aware of their roles and responsibilities.
+Arrangements for service providers, including cloud and managed services, to provide and retain logs
+☐
+have been established and tested to ensure they include useful data which can be provided in a timely
+manner.
+☐ Log retention mechanisms for critical systems, services and networks have been adequately configured
+and tested to ensure that they capture useful data.
+Your organisation has internal or third party arrangements and capabilities to detect and analyse
+☐
+cybersecurity events/incidents. If these capabilities are outsourced, your organisation has an active
+service agreement/contract.
+Cybersecurity incident response planning: Practitioner guidance 27
+☐
+Critical assets (systems, services and networks) have been identified and documented.
+SOPs have been developed, and roles and responsibilities assigned, for use of facilities and
+☐
+communications technologies in response to cybersecurity incidents, and these resources are confirmed
+as available. This includes for alternative/backup IT-based communication channels.
+☐ Cybersecurity incident logging/records and tracking technologies used to manage any response to
+cybersecurity incidents are confirmed as available and have been tested.
+☐
+Role cards have been developed for personnel involved in the CIRT and the SEMT.
+Your organisation has internal or third party arrangements and capabilities to monitor cyberthreats.
+Situational awareness information is collected from internal and external data sources, including:
+ local system and network traffic and activity logs
+☐
+ news concerning political, social or economic activities that might impact cybersecurity incident
+activity
+ external feeds on cybersecurity incident trends, new attack vectors, current attack indicators and new
+mitigation strategies and technologies.
+DETECTION, INVESTIGATION, ANALYSIS AND ACTIVATION
+SOPs have been developed, and roles and responsibilities assigned, for:
+Detection mechanisms which can be used to identify cybersecurity events/incidents, such as scanning,
+sensor and logging mechanisms. These mechanisms require monitoring processes to identify unusual or
+suspicious activity commensurate with the potential impact of a cybersecurity incident.
+Common monitoring techniques include:
+ network and user profiling that establishes a baseline of normal activity which, when combined with
+logging and alerting mechanisms, can enable detection of anomalous activity
+ scanning for the introduction of unauthorised hardware and software
+☐
+ scanning for unauthorised changes to hardware and software configurations
+ sensors that provide an alert when a measure breaches a defined threshold(s) (e.g. device, server and
+network activity)
+ logging and alerting of access to sensitive data or unsuccessful logon attempts to identify potential
+unauthorised access
+ users with privileged access accounts subject to a greater level of monitoring in light of the heightened
+risks involved.
+☐ Cybersecurity incident detection, including self-detected cybersecurity incidents, notifications received
+from service providers or vendors, and notifications received from trusted third parties (e.g. ASD).
+☐ Cybersecurity incident analysis, including how cybersecurity incidents are to be categorised, classified
+and prioritised, and controls related to how data is stored and transmitted.
+☐
+Activating a CIRT to manage cybersecurity incidents, with roles and responsibilities assigned.
+Cybersecurity incident response planning: Practitioner guidance 28
+☐
+Activating a SEMT to manage cybersecurity incidents, with roles and responsibilities assigned.
+CONTAINMENT, EVIDENCE COLLECTION AND REMEDIATION
+☐ SOPs, playbooks and templates have been developed, and roles and responsibilities assigned, for
+containment, evidence collection and remediation.
+A secure location is available for storing data captured during cybersecurity incidents, which could be
+☐
+used as evidence of the malicious actor’s tradecraft, and is ready to be provided to third-party
+stakeholders if requested.
+COMMUNICATIONS
+SOPs, playbooks and templates have been developed to support communicating with internal and
+☐
+external stakeholders.
+SOPs, playbooks and templates for media and communications professionals have been developed, and
+☐
+roles and responsibilities assigned, to support public and media messaging.
+☐ You organisation has assigned a public and media spokesperson who is supported by technical subject
+matter experts.
+☐ Personnel have been trained to implement communications processes and execute their roles and
+responsibilities.
+All personnel are cognisant of your organisation’s policy, and their responsibilities, when a cybersecurity
+☐
+incident occurs (e.g. exercising discretion, using approved talking points, referring enquiries to the
+designated public and media spokesperson).
+CYBERSECURITY INCIDENT NOTIFICATION AND REPORTING
+Processes and procedures are documented to support your organisation to meet its legal and regulatory
+☐ requirements on cybersecurity incident notification and reporting with roles and responsibilities within
+your organisation assigned. This includes the processes for obtaining authority to release and share
+information.
+☐
+Processes and procedures are documented for communicating with any cyber insurance providers.
+POST CYBERSECURITY INCIDENT REVIEW
+Processes are procedures are documented to support post cybersecurity incident reviews following the
+☐
+resolution of cybersecurity incidents, with post cybersecurity incident review reports submitted to
+management for endorsement.
+☐ Processes and procedures are documented to ensure actions following cybersecurity incidents and/or
+exercises are tracked and completed (e.g. within an action register).
+Cybersecurity incident response planning: Practitioner guidance 29
+Appendix H: Post cybersecurity incident reviews
+A post cybersecurity incident review is a detailed review conducted after an organisation has experienced a
+cybersecurity incident. The content of the review will vary for each organisation, but primarily focuses on establishing
+learnings and providing recommended actions to mitigate future cybersecurity incidents. The purpose of this guide is
+to provide organisations that have experienced a cybersecurity incident with tools and techniques to conduct a post
+cybersecurity incident review.
+How to use this guide
+This guide contains high level steps recommended for organisations to follow after experiencing a cybersecurity
+incident. The guide should be used as a resource, and will need to be further tailored by organisations to suit their
+individual requirements. The templates provided are generic and will need to be tailored to suit specific organisational
+requirements.
+Post cybersecurity incident review steps
+Step 1 – Hold cybersecurity incident debriefs
+Post cybersecurity incident debriefs are useful for capturing observations from personnel directly involved in
+managing a cybersecurity incident and identifying actions to improve how their organisation managed its response, as
+well as how the cybersecurity incident could have been prevented. There are two types of debriefs organisations may
+hold after experiencing a cybersecurity incident: a hot debrief and a formal debrief (also known as a cold debrief).
+A hot debrief is held immediately after an organisation has recovered its systems, services or networks from a
+cybersecurity incident. The benefits of holding a hot debrief include:
+ the team involved in responding to the cybersecurity incident can provide instant feedback and lessons learned
+ any urgent issues identified during the cybersecurity incident can be addressed immediately
+ personnel involved in the cybersecurity incident are more likely to recall information and detail as it is still fresh
+in their minds.
+A formal debrief is held days to weeks after an organisation has recovered its systems, services or networks from a
+cybersecurity incident. The benefits of holding a formal debrief include:
+ it provides an opportunity to discuss the cybersecurity incident in detail after it is resolved to gather key insights,
+learnings and opportunities for improvement
+ it provides time between the cybersecurity incident and debrief allowing emotions to settle, particularly for
+stressful cybersecurity incidents
+ it ensures all key personnel required for discussions are present, especially senior management who will need to
+drive the implementation of actions.
+Hot debrief guidance
+Time
+30 minutes – 1 hour.
+Cybersecurity incident response planning: Practitioner guidance 36
+Aim
+The aim of the hot debrief is to review the cybersecurity incident, receive feedback on personnel observations and
+insights, and identify any urgent issues requiring immediate action.
+Participants
+The hot debrief should be led by a facilitator (such as a manager who was involved during the cybersecurity incident)
+and supported by a scribe whose role is to document attendance, key insights and immediate actions. It is
+recommended that hot debrief participants include all personnel involved during the detection, response and
+recovery phases of the cybersecurity incident, with upper management excluded (e.g. chief executive officers and
+general managers). This will ensure personnel involved in the cybersecurity incident can speak openly without fear of
+repercussion.
+Content
+The facilitator could guide discussion using the following questions:
+ What went well?
+ What could we do differently next time to improve?
+ What action has been taken to remediate immediate risk?
+ Are there any further issues that require immediate resolution?
+Note, it is essential for the facilitator to remain objective during the discussion, and treat the cybersecurity incident as
+a learning point for all involved, without attributing blame to an individual or team.
+Conclusion
+At the end of the hot debrief, the facilitator should provide a summary of the discussions to participants who can
+confirm whether the key issues and actions were captured. The facilitator should explain the next steps and the
+expected timeframes for these.
+Formal debrief guidance
+Time
+1–2 hours.
+Aim
+The aim of the formal debrief is to review the cybersecurity incident, validate what worked, and produce actions and
+assigned responsibilities to improve current arrangements.
+Participants
+The formal debrief should be led by a facilitator who asks key questions, supported by a scribe to document
+attendance, key insights and actions.
+It is recommended that formal debrief participants include:
+ technical personnel who were involved in detecting, responding to and resolving the cybersecurity incident
+Cybersecurity incident response planning: Practitioner guidance 37
+ non-technical personnel who were involved during the cybersecurity incident
+ communications/media personnel involved in the cybersecurity incident.
+Content
+Questions to consider in the formal debrief can be found in the post cybersecurity incident review analysis Template.
+The facilitator can use this guidance to lead the conversation with the participants while the scribe documents the
+discussion directly into the template. The scribe can also use the action register template to document any actions
+resulting from the discussion.
+Conclusion
+At the end of the debrief, a decision should be made about whether additional discussions are required, or if
+finalisation of the cybersecurity incident documentation can be completed. If email correspondence is selected to
+disseminate the documentation, an action officer will need to be identified for completing them and circulating them
+to staff for endorsement.
+Step 2 – Complete cybersecurity incident documentation
+Based on the findings of the debriefs, the action officer should complete a draft of the post cybersecurity incident
+review analysis and the action register and circulate them to the personnel involved in the debrief for their feedback
+and endorsement. Note, it is important that the action register details an assigned lead (action officer) for closing out
+each action.
+Once feedback is received and incorporated, documentation should be sent to an executive staff member (e.g. a chief
+executive officer or general manager) for endorsement. The executive staff member may advise their expectations on
+the frequency of progress reporting of agreed actions and nominate a person to lead tracking and reporting.
+Step 3 – Cybersecurity incident tracking and reporting
+The identified actions should be tracked and reported at agreed frequencies.
+Post cybersecurity incident review analysis template
+CYBERSECURITY INCIDENT SUMMARY
+Cybersecurity incident
+name
+Date of cybersecurity dd/mm/yyyy
+incident
+Cybersecurity incident Low/Medium/High
+priority Established from the impact and/or risk to the business.
+Time cybersecurity incident
+occurred
+Cybersecurity incident response planning: Practitioner guidance 38

@@ -8,6 +8,8 @@ jsonschema>=4.19
 
 # --- Text processing (Phase 2 onward) ---
 tiktoken>=0.5
+pdfplumber>=0.11
+beautifulsoup4>=4.12
 
 # --- Agreement metrics (Phase 5) ---
 scikit-learn>=1.3

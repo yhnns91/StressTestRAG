@@ -1,0 +1,142 @@
+{
+  "_comment": "Per-document extraction rules for Phase 2. Every deviation from a plain full-document extraction is declared here rather than applied by hand, so that the result is reproducible and every exclusion has a recorded reason (assignment document section 3.2).",
+  "source_root": "~/Downloads/stresstest-sources",
+  "documents": {
+    "CYB-001": {
+      "file": "CYB/CYB-001_NCSC_response_and_recovery.pdf",
+      "type": "pdf",
+      "scope": "full",
+      "reason": "12-page guide, all prose. Page 3 is set in two columns whose gutter carries no measurable whitespace, so automatic detection returns a single column and the Introduction and 'What is an incident?' sections interleave line by line. The boundary is given explicitly at x=210 for that page only; the remaining pages detect their columns correctly.",
+      "column_splits": {
+        "3": [
+          210
+        ]
+      }
+    },
+    "CYB-002": {
+      "file": "CYB/CYB-002_ACSC_cyber_incident_response_plan_guidance.pdf",
+      "type": "pdf",
+      "scope": "pages",
+      "pages": [
+        [
+          31,
+          35
+        ],
+        [
+          41,
+          43
+        ]
+      ],
+      "reason": "Screening decision 7.2: scope limited to Appendices A, B and H. Page positions were verified by hand in a PDF viewer and then confirmed page by page against the extracted text: 31 is Appendix A (terminology), 32-35 are Appendix B (readiness checklist), 41-43 are the prose part of Appendix H (post-incident review). Pages 36-40 and 44-50 are excluded because they are Appendices C to G and the PIR analysis form - blank templates that cannot serve as evidence. Excluding 38-40 also removes a defect: those pages are landscape tables and pdfplumber returns their text character-reversed ('xidneppA' for 'Appendix'). Marker-based slicing was tried first and abandoned because the word 'Appendix' appears throughout the body as cross-references."
+    },
+    "CYB-003": {
+      "file": "CYB/CYB-003_ACSC_practitioner_guidance.pdf",
+      "type": "pdf",
+      "scope": "pages",
+      "pages": [
+        [
+          29,
+          33
+        ],
+        [
+          40,
+          42
+        ]
+      ],
+      "reason": "Screening decision 7.2: scope limited to Appendices A, B and H. Verified page by page against the extracted text: 29-30 are Appendix A (terminology and definitions), 31-33 are Appendix B (readiness checklist), 40-42 are the prose part of Appendix H (post cybersecurity incident reviews, including the hot debrief and formal debrief guidance). Pages 34-39 and 43-47 are excluded as Appendices C to G and the PIR analysis form. Page numbers are PDF viewer positions, not printed page numbers; the two differ by four in this document."
+    },
+    "CYB-004": {
+      "file": "CYB/CYB-004_NIST_SP800-61r3.pdf",
+      "type": "pdf",
+      "scope": "pages",
+      "pages": [
+        9,
+        17
+      ],
+      "reason": "Screening decision 7.2: Executive Summary and Sections 1-2 only. Section 3 is a CSF reference table unsuitable for semantic chunking; the remainder is references, acronyms and glossary."
+    },
+    "DIS-001": {
+      "file": "DIS/DIS-001_FEMA_earthquake_info_sheet.pdf",
+      "type": "pdf",
+      "scope": "full",
+      "reason": "2-page hazard sheet."
+    },
+    "DIS-002": {
+      "file": "DIS/DIS-002_FEMA_flood_info_sheet.pdf",
+      "type": "pdf",
+      "scope": "full",
+      "manual_review": true,
+      "reason": "Screening risk 7.1: the PDF carries two overlapping text layers. Extraction output must be inspected and the cover panel cleaned before chunking."
+    },
+    "DIS-003": {
+      "file": "DIS/DIS-003_FEMA_tornado_info_sheet.pdf",
+      "type": "pdf",
+      "scope": "full",
+      "reason": "2-page hazard sheet. Source typo 'overpas' is preserved verbatim (screening risk 7.3)."
+    },
+    "DIS-004": {
+      "file": "DIS/DIS-004_NWS_flood_watch_vs_warning.html",
+      "type": "html",
+      "scope": "full",
+      "content_selector": ".cms-content",
+      "drop_selectors": [
+        "script",
+        "style",
+        "noscript",
+        "form"
+      ],
+      "reason": "Definitional page giving the four flood alert levels. weather.gov contains no <nav>, <header>, <footer> or <main> elements, so dropping by tag removed nothing and the first extraction carried roughly 140 words of site menu into the corpus. The article is held in '.cms-content'; selecting it directly yields 237 words of body text."
+    },
+    "INF-001": {
+      "file": "INF/INF-001_FEMA_power_outage_info_sheet.pdf",
+      "type": "pdf",
+      "scope": "full",
+      "reason": "2-page hazard sheet."
+    },
+    "INF-002": {
+      "file": "INF/INF-002_CPSC_portable_generator_hazards.pdf",
+      "type": "pdf",
+      "scope": "full",
+      "reason": "1-page safety alert, four headed blocks. The page is set in two columns whose gutter is too narrow for automatic detection, so the boundary is given explicitly at x=305; without it the Carbon Monoxide, Electrical and Fire hazard blocks interleave line by line.",
+      "column_splits": [
+        305
+      ]
+    },
+    "INF-003": {
+      "file": "INF/INF-003_USDA_keep_food_safe_emergencies.html",
+      "type": "html",
+      "scope": "markers",
+      "drop_selectors": [
+        "nav",
+        "header",
+        "footer",
+        "script",
+        "style",
+        "noscript",
+        "form",
+        "aside"
+      ],
+      "start_marker": "Power Outages",
+      "end_marker": "Last Updated",
+      "reason": "Screening risk 7.2: raw extraction returns roughly 2,655 words of which only about 1,782 are article. Navigation must be stripped or chunking will produce dozens of menu-text chunks."
+    },
+    "INF-004": {
+      "file": "INF/INF-004_DOE_staying_informed.html",
+      "type": "html",
+      "scope": "markers",
+      "drop_selectors": [
+        "nav",
+        "header",
+        "footer",
+        "script",
+        "style",
+        "noscript",
+        "form",
+        "aside"
+      ],
+      "start_marker": "Staying informed during a power outage",
+      "end_marker": "For additional resources",
+      "reason": "Short page. Body content only; the surrounding page furniture changes between saves."
+    }
+  }
+}
