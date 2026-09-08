@@ -2,7 +2,7 @@
 
 - **Issue:** #16
 - **Branch:** `task/issue-016-baseline-questions`
-- **Commit:** `<isi sebelum push terakhir>`
+- **Commit:** `74ff595`
 - **Date:** 2026-08-21
 
 ---
